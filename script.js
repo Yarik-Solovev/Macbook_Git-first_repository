@@ -43,36 +43,52 @@
 // const {name: userName, age} = user;//name:... чтобы задать свое название ключу
 // console.log(userName);
 
-const user = {
-    name:'Alex',
-    age:21,
-    hasCar:false,
-}
+// const user = {
+//     name:'Alex',
+//     age:21,
+//     hasCar:false,
+// }
 
-const moder = {
-    ...user,
-    hasCar:true,
-    hasModerStatus:true,
-}
+// const moder = {
+//     ...user,
+//     hasCar:true,
+//     hasModerStatus:true,
+// }
 
-console.log(moder);
+// console.log(moder);
 
-const user_second = {
-    name:'Alex',
-    age:21,
-    hasCar:{
-        model:'Tesla',
-        color:'red',
-    },
-}
+// const user_second = {
+//     name:'Alex',
+//     age:21,
+//     hasCar:{
+//         model:'Tesla',
+//         color:'red',
+//     },
+// }
 
-const moder_second = {
-    ...user,
-    hasCar:{
-        ...user_second.hasCar
-    },
+// const moder_second = {
+//     ...user,
+//     hasCar:{
+//         ...user_second.hasCar
+//     },
     
-    hasModerStatus:true,
-}
+//     hasModerStatus:true,
+// }
 
-console.log(moder_second);
+// console.log(moder_second);
+
+
+// const user = {
+//     name:'Alex',
+//     age:18,
+//     hasCar:true,
+// };
+
+// const {hasCar, ...rest} = user;
+
+// const getInfo = (user) => {
+//     console.log(user)
+//     console.log(user.age, user.name);
+// };
+
+// console.log(getInfo(rest));
