@@ -92,3 +92,24 @@
 // };
 
 // console.log(getInfo(rest));
+
+
+const  a = setTimeout(() => {
+    console.log(1);
+},1000)
+
+
+clearTimeout(a);
+
+
+console.log(2);
+console.log(3);
+
+// const b = setInterval(() => {
+//     console.log('ванюща пора кушать');
+// }, 1000)
+
+
+setTimeout(() => {
+    clearInterval(b)
+}, 5000)//убереть  console.log('ванюща пора кушать через 5 секунд (или выполнений)
