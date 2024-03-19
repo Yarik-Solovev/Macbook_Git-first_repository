@@ -94,22 +94,62 @@
 // console.log(getInfo(rest));
 
 
-const  a = setTimeout(() => {
-    console.log(1);
-},1000)
+// const  a = setTimeout(() => {
+//     console.log(1);
+// },1000)
 
 
-clearTimeout(a);
+// clearTimeout(a);
 
 
-console.log(2);
-console.log(3);
+// console.log(2);
+// console.log(3);
 
-// const b = setInterval(() => {
-//     console.log('ванюща пора кушать');
-// }, 1000)
+// // const b = setInterval(() => {
+// //     console.log('ванюща пора кушать');
+// // }, 1000)
 
 
-setTimeout(() => {
-    clearInterval(b)
-}, 5000)//убереть  console.log('ванюща пора кушать через 5 секунд (или выполнений)
+// setTimeout(() => {
+//     clearInterval(b)
+// }, 5000)//убереть  console.log('ванюща пора кушать через 5 секунд (или выполнений)
+
+
+
+
+
+// const getUserInfo = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const mainData = {name:'Alex', age:17, hasCar: true, id:1,};
+//             resolve(mainData);
+//         }, 2000)
+//     })
+// }
+
+// const getGame = (id) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             const mainGame = {name:'GTA V', price:3000, value: 1,};
+//             resolve(mainGame);
+//         }, 2000)
+//     })
+// }
+
+// const run = () => {
+//     Promise.all([getGame(), getUserInfo()])
+//             .then((userInfo) => {
+//                 console.log(userInfo);
+//                 return getGame(userInfo.id)
+//             })
+//             .then((game) => {
+//                 console.log(game);
+//             })
+                
+// }
+
+// run()
+
+
+
+
