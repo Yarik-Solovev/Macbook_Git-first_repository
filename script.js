@@ -183,19 +183,19 @@
 //             })
 
 
-const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
+// const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
 
-fetch(url)
-    .then((data) => {
-        return data.json()
-    })
-    .then((info) => {
-        renderCurrentInterval(info.current.interval);
-    })
+// fetch(url)
+//     .then((data) => {
+//         return data.json()
+//     })
+//     .then((info) => {
+//         renderCurrentInterval(info.current.interval);
+//     })
 
 
-  function renderCurrentInterval (information) {
-    const div = document.createElement('div');
-    div.textContent=`${information}`
-    document.body.append(div);
-  }
+//   function renderCurrentInterval (information) {
+//     const div = document.createElement('div');
+//     div.textContent=`${information}`
+//     document.body.append(div);
+//   }
