@@ -224,7 +224,7 @@ const run = () => {
             })
             .then((info) => {
                 const infoFromServer =(info[0])
-                r
+                
             })
     })
 }
