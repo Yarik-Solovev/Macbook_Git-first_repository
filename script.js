@@ -199,3 +199,35 @@
 //     div.textContent=`${information}`
 //     document.body.append(div);
 //   }
+
+
+// function openOrSenior(data){
+//     let finalList = [];
+//     data.forEach((el) => {
+//         if(el[0] >= 55 && el[1] > 7){
+//             finalList.push('Senior')
+//         }
+//         else {
+//             finalList.push('Open')
+//         }
+        
+//     });
+//     return finalList
+// }
+
+
+const run = () => {
+    return new Promise((res, rej) => {
+        fetch('https://jsonplaceholder.typicode.com/comments')
+            .then((data) => {
+                return data.json()
+            })
+            .then((info) => {
+                const infoFromServer =(info[0])
+                r
+            })
+           
+    })
+}
+
+run()
