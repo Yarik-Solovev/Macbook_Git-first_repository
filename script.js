@@ -226,7 +226,6 @@ const run = () => {
                 const infoFromServer =(info[0])
                 r
             })
-           
     })
 }
 
