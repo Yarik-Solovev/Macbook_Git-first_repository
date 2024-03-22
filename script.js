@@ -276,8 +276,14 @@ const firstPart = document.querySelector('.firstPart')
   button.addEventListener('click', getWeatherInfo)
 
   
+
+
  let data;
 
+// try и catch  ток с синхронныйм кодом
+
+
+//startAnimation
  try{
   data = JSON.parse('{"name": "Alex"}')
   console.log(data);
@@ -285,5 +291,20 @@ const firstPart = document.querySelector('.firstPart')
  catch (error){
   console.dir(error)
  }
+ finally{
+//endAnimation
+ }
 
  console.log('Somethink');
+
+const calc = (a, b) => {
+  if(a !== Number) {
+    throw Error('a - не число')
+  }
+  if(b !== Number) {
+    throw Error('b - не число')
+  }
+  return a + b
+}
+
+console.log(calc('1', 2))
