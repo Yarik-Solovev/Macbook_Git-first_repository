@@ -55,11 +55,42 @@ body {
     width: 80px;
 }
 
+.main {
+    background-color: black;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left:350px;
+    margin-top: 100px;
+}
 
+.firstPart {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.secondPart {
+    width: 250px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.secondPartButton {
+    width: 150px;
+    height: 100px;
+}
 
-
+.info{
+    color:white
+}
 
 
 

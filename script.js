@@ -183,23 +183,6 @@
 //             })
 
 
-// const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
-
-// fetch(url)
-//     .then((data) => {
-//         return data.json()
-//     })
-//     .then((info) => {
-//         renderCurrentInterval(info.current.interval);
-//     })
-
-
-//   function renderCurrentInterval (information) {
-//     const div = document.createElement('div');
-//     div.textContent=`${information}`
-//     document.body.append(div);
-//   }
-
 
 // function openOrSenior(data){
 //     let finalList = [];
@@ -216,17 +199,81 @@
 // }
 
 
-const run = () => {
-    return new Promise((res, rej) => {
-        fetch('https://jsonplaceholder.typicode.com/comments')
-            .then((data) => {
-                return data.json()
-            })
-            .then((info) => {
-                const infoFromServer =(info[0])
+// const run = () => {
+//     return new Promise((res, rej) => {
+//         fetch('https://jsonplaceholder.typicode.com/comments')
+//             .then((data) => {
+//                 return data.json()
+//             })
+//             .then((info) => {
+//                 const infoFromServer =(info[0])
                 
-            })
-    })
+//             })
+//     })
+// }
+//  run()
+
+// const delay = (ms) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve()
+//         }, ms)
+//     })
+// }
+
+//  const url = 'https://jsonplaceholder.typicode.com/comments/1'
+
+// function fetchTodos() {
+//     return delay(2000)
+//         .then(() => {
+//             return fetch(url)
+//                 .then((data) => {
+//                      return data.json()
+//                 })
+                
+//         })
+// }
+
+// fetchTodos()
+//     .then((info) => {
+//         console.log('User',info)
+//     })
+
+
+
+//тоже самое что сверху только на async await
+// async function asyncFetchTodos() {
+//     await delay(2000);
+//     const data = await fetch(url);
+//     const info = await data.json();
+//     console.log(info)
+// }
+
+// asyncFetchTodos()
+
+const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
+
+
+ async function getWeatherInfo() {
+     const data = await fetch(url);
+     const info = await data.json();
+     renderCurrentInterval(info.current.interval) 
+     
 }
 
-run()
+const firstPart = document.querySelector('.firstPart')
+
+  function renderCurrentInterval (information) {
+    const div = document.createElement('div');
+    div.textContent=`${information}`
+    div.className='info'
+    firstPart.append(div);
+    button.removeEventListener('click')
+  }
+
+
+  const button = document.querySelector('.secondPartButton')
+  button.addEventListener('click', getWeatherInfo)
+
+  
+ 
