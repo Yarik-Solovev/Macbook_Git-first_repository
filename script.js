@@ -280,31 +280,50 @@ const firstPart = document.querySelector('.firstPart')
 
  let data;
 
-// try и catch  ток с синхронныйм кодом
+// // try и catch  ток с синхронныйм кодом
 
 
-//startAnimation
- try{
-  data = JSON.parse('{"name": "Alex"}')
-  console.log(data);
- }
- catch (error){
-  console.dir(error)
- }
- finally{
-//endAnimation
- }
+// //startAnimation
+//  try{
+//   data = JSON.parse('{"name": "Alex"}')
+//   console.log(data);
+//  }
+//  catch (error){
+//   console.dir(error)
+//  }
+//  finally{
+// //endAnimation
+//  }
 
- console.log('Somethink');
+//  console.log('Somethink');
 
-const calc = (a, b) => {
-  if(a !== Number) {
-    throw Error('a - не число')
-  }
-  if(b !== Number) {
-    throw Error('b - не число')
-  }
-  return a + b
-}
+// const calc = (a, b) => {
+//   if(a !== Number) {
+//     throw Error('a - не число')
+//   }
+//   if(b !== Number) {
+//     throw Error('b - не число')
+//   }
+//   return a + b
+// }
 
-console.log(calc('1', 2))
+// console.log(calc(1, 2))
+
+// const myNumber = 42;
+
+// localStorage.setItem('number', myNumber.toString())
+// console.log(localStorage.getItem('number'))
+// localStorage.removeItem('number')
+// localStorage.clear()
+
+// const obj = {
+//   name:'Alex',
+//   Age:18,
+// }
+
+// localStorage.setItem('person', JSON.stringify(obj))
+
+// const raw = localStorage.getItem('person');
+// const person = JSON.parse(raw);
+// person.name = 'Ivan'
+// console.log(person);
