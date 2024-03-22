@@ -276,4 +276,14 @@ const firstPart = document.querySelector('.firstPart')
   button.addEventListener('click', getWeatherInfo)
 
   
- 
+ let data;
+
+ try{
+  data = JSON.parse('{"name": "Alex"}')
+  console.log(data);
+ }
+ catch (error){
+  console.dir(error)
+ }
+
+ console.log('Somethink');
