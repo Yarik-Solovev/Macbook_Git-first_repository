@@ -328,13 +328,4 @@ const firstPart = document.querySelector('.firstPart')
 // person.name = 'Ivan'
 // console.log(person);
 
-function squareDigits(num){
-  let a = num.toString().split('')
-  const b = a.map((el) => {
-    let c = el * el;
-    return Number(c)
-  })
-  return b.join('')
-}
 
-console.log(squareDigits(765))
