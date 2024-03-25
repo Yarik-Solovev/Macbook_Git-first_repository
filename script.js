@@ -268,7 +268,6 @@ const firstPart = document.querySelector('.firstPart')
     div.textContent=`${information}`
     div.className='info'
     firstPart.append(div);
-    button.removeEventListener('click')
   }
 
 
