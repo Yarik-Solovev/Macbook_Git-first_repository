@@ -329,3 +329,4 @@ const firstPart = document.querySelector('.firstPart')
 // console.log(person);
 
 
+
