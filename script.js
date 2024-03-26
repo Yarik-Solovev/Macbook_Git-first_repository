@@ -370,3 +370,4 @@ Array.prototype.MultyNum = function(n){
 console.log(array.MultyNum(2))
 console.log(array.MultyNum(5))
 
+
