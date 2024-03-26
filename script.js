@@ -329,3 +329,44 @@ const firstPart = document.querySelector('.firstPart')
 
 
 
+function hello() {
+  console.log('hello', this)
+}
+
+const person = {
+  name:'Alex',
+  age:12,
+  sayHello: hello,
+  LogInfo: function(job, number) {
+    console.log(`name-${this.name}`)
+    console.log(`age-${this.age}`)
+    console.log(`job-${job}`)
+    console.log(`num-${number}`)
+  },
+}
+
+// person.LogInfo()
+
+// hello()
+
+const Lena = {
+  name:'Elena',
+  age:14,
+}
+
+// person.LogInfo.bind(Lena, 'Frontend', '8-123-123-12-12',)();
+// person.LogInfo.call(Lena, 'Frontend', '8-123-123-12-12',);
+// person.LogInfo.apply(Lena, ['Frontend', '8-123-123-12-12']);
+
+
+const array = [1,2,3,4,5,]
+
+Array.prototype.MultyNum = function(n){
+  return this.map((el) => {
+    return el * n
+  })
+}
+
+console.log(array.MultyNum(2))
+console.log(array.MultyNum(5))
+
