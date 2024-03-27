@@ -371,3 +371,4 @@ const firstPart = document.querySelector('.firstPart')
 // console.log(array.MultyNum(5))
 
 
+//event loop 25 minutes
