@@ -411,3 +411,5 @@ const firstPart = document.querySelector('.firstPart')
 // incrementFromFunc()
 // incrementFromFunc()
 // logFromFunc()//в функции лог выведет что message равен 0
+
+//замыкание это способность функции запоминать лексическое окружене в которои она была создана
