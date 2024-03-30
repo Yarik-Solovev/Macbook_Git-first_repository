@@ -336,7 +336,6 @@ const firstPart = document.querySelector('.firstPart')
 // const person = {
 //   name:'Alex',
 //   age:12,
-//   sayHello: hello,
 //   LogInfo: function(job, number) {
 //     console.log(`name-${this.name}`)
 //     console.log(`age-${this.age}`)
@@ -354,9 +353,9 @@ const firstPart = document.querySelector('.firstPart')
 //   age:14,
 // }
 
-// // person.LogInfo.bind(Lena, 'Frontend', '8-123-123-12-12',)();
-// // person.LogInfo.call(Lena, 'Frontend', '8-123-123-12-12',);
-// // person.LogInfo.apply(Lena, ['Frontend', '8-123-123-12-12']);
+// person.LogInfo.bind(Lena, 'Frontend', '8-123-123-12-12',)();
+// person.LogInfo.call(Lena, 'Frontend', '8-123-123-12-12',);
+// person.LogInfo.apply(Lena, ['Frontend', '8-123-123-12-12']);
 
 
 // const array = [1,2,3,4,5,]
@@ -372,3 +371,43 @@ const firstPart = document.querySelector('.firstPart')
 
 
 //event loop 25 minutes
+
+
+// const createElement = () => {
+//   let count = 0;
+//   function increment() {
+//     count++
+//   }
+//   function log() {
+//     let message = `count is ${count}`
+//     console.log(message)
+//   }
+
+//   return [increment, log]
+// }
+
+// const [incrementFromFunc, logFromFunc] = createElement();
+// incrementFromFunc()
+// incrementFromFunc()
+// incrementFromFunc()
+// logFromFunc()//в функции лог выведет что message равен 3
+
+
+// const createElement = () => {
+//   let count = 0;
+//   function increment() {
+//     count++
+//   }
+//   let message = `count is ${count}`
+//   function log() {
+//     console.log(message)
+//   }
+
+//   return [increment, log]
+// }
+
+// const [incrementFromFunc, logFromFunc] = createElement();
+// incrementFromFunc()
+// incrementFromFunc()
+// incrementFromFunc()
+// logFromFunc()//в функции лог выведет что message равен 0
