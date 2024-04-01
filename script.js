@@ -415,13 +415,14 @@ const firstPart = document.querySelector('.firstPart')
 //замыкание это способность функции запоминать лексическое окружене в которои она была создана
 
 //factorial это 3! = 1*2*3 = 6
-const factorial = (n) => {
-  if(n === 1){
-    return 1
-  }
-  else if(n > 1){
-  return n * factorial(n-1);
-  }
-}
+// const factorial = (n) => {
+//   if(n === 1){
+//     return 1
+//   }
+//   else if(n > 1){
+//   return n * factorial(n-1);
+//   }
+// }
 
-console.log(factorial(3))
+// console.log(factorial(3))
+
