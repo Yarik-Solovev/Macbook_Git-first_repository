@@ -426,3 +426,24 @@ const firstPart = document.querySelector('.firstPart')
 
 // console.log(factorial(3))
 
+function checkSubstr(str, subStr){
+  const regExp = new RegExp(subStr);
+  return regExp.test(str)
+}
+
+console.log(checkSubstr('jjjjfjdkfdjfjdkfjka', 'a'))
+//или
+//i
+console.log(/love/i.test('i love you'));//не чувствителен к регистру можно все версии
+//g
+console.log('I love love you'.match(/love/g));//глобальный поиск вернет массив [love, love]
+
+const str = `
+1 mn
+2 mn
+3 mn
+`
+
+
+console.log(str.match(/^\d/gm))//массив первых значений 
+console.log('I love you'.replace(/love/, 'like'));
