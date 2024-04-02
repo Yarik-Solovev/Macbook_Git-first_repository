@@ -447,3 +447,27 @@ const str = `
 
 console.log(str.match(/^\d/gm))//массив первых значений 
 console.log('I love you'.replace(/love/, 'like'));
+
+// \d любая цифра 
+// \w любая цифра,буква или пробел
+// \s пробед
+// \D любой символ кроме D
+// \W любой символ кроме W
+// \S любой символ кроме S
+// . любой символ кроме  /n
+
+console.log(/\d/.test('1 man'))
+
+// ^ начало строки 
+// $ конец строки 
+
+// диапозоны
+
+
+//[sdr]
+//[0-9]
+//[a-z]
+
+console.log(/[sdr]/.test('dddd'));
+
+//еще больше инфы (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
