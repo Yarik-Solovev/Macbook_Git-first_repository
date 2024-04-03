@@ -473,3 +473,4 @@ console.log(/[sdr]/.test('dddd'));
 
 
 //еще больше инфы  если надо (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
+
