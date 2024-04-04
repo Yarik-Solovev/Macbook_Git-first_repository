@@ -259,7 +259,7 @@ const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.4
      const info = await data.json();
      renderCurrentInterval(info.current.interval) 
      
-}
+    }
 
 const firstPart = document.querySelector('.firstPart')
 
@@ -268,6 +268,7 @@ const firstPart = document.querySelector('.firstPart')
     div.textContent=`${information}`
     div.className='info'
     firstPart.append(div);
+    button.removeEventListener('click', getWeatherInfo)
   }
 
 
@@ -456,7 +457,7 @@ console.log('I love you'.replace(/love/, 'like'));
 // \S любой символ кроме S
 // . любой символ кроме  /n
 
-console.log(/\d/.test('1 man'))
+// console.log(/\d/.test('1 man'))
 
 // ^ начало строки 
 // $ конец строки 
@@ -468,9 +469,45 @@ console.log(/\d/.test('1 man'))
 //[0-9] диапозон от 0 - 9
 //[a-z] диапозон от a - z
 
-console.log(/[sdr]/.test('dddd'));
+console.log(/[sdr]/.test('#'));
 
 
 
 //еще больше инфы  если надо (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
 
+const a = {
+  name:'alex',
+  age:18,
+  job:'Frontend dev'
+}
+
+const b = [
+  ['name', 'alex'],
+  ['age', 18],
+  ['job', 'Frontend dev']
+]
+
+// console.log(Object.entries(a));
+// console.log(Object.fromEntries(b));
+
+const map = new Map(b)
+console.log(map);
+console.log(map.get('job'));
+console.log(map.set('H', 'it is h'));
+console.log(map.delete('H'))
+console.log(map.has('H'));
+console.log(map.size);
+// map.clear()
+
+
+for (let [key, value] of map){
+  console.log(key, value)
+}
+
+for (let key of map.keys()){// выдает ключи 
+  console.log(key)
+}
+
+for (let value of map.values()){// выдает значения
+  console.log( value)
+}
