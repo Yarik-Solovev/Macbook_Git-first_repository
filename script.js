@@ -427,87 +427,96 @@ const firstPart = document.querySelector('.firstPart')
 
 // console.log(factorial(3))
 
-function checkSubstr(str, subStr){
-  const regExp = new RegExp(subStr);
-  return regExp.test(str)
+// function checkSubstr(str, subStr){
+//   const regExp = new RegExp(subStr);
+//   return regExp.test(str)
+// }
+
+// console.log(checkSubstr('jjjjfjdkfdjfjdkfjka', 'a'))
+// //или
+// //i
+// console.log(/love/i.test('i love you'));//не чувствителен к регистру можно все версии
+// //g
+// console.log('I love love you'.match(/love/g));//глобальный поиск вернет массив [love, love]
+
+// const str = `
+// 1 mn
+// 2 mn
+// 3 mn
+// `
+
+
+// console.log(str.match(/^\d/gm))//массив первых значений 
+// console.log('I love you'.replace(/love/, 'like'));
+
+// // \d любая цифра 
+// // \w любая цифра,буква или пробел
+// // \s пробед
+// // \D любой символ кроме D
+// // \W любой символ кроме W
+// // \S любой символ кроме S
+// // . любой символ кроме  /n
+
+// // console.log(/\d/.test('1 man'))
+
+// // ^ начало строки 
+// // $ конец строки 
+
+// // диапозоны
+
+
+// //[sdr] любой символ
+// //[0-9] диапозон от 0 - 9
+// //[a-z] диапозон от a - z
+
+// console.log(/[sdr]/.test('#'));
+
+
+
+// //еще больше инфы  если надо (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
+
+// const a = {
+//   name:'alex',
+//   age:18,
+//   job:'Frontend dev'
+// }
+
+// const b = [
+//   ['name', 'alex'],
+//   ['age', 18],
+//   ['job', 'Frontend dev']
+// ]
+
+// // console.log(Object.entries(a));
+// // console.log(Object.fromEntries(b));
+
+// const map = new Map(b)
+// console.log(map);
+// console.log(map.get('job'));
+// console.log(map.set('H', 'it is h'));
+// console.log(map.delete('H'))
+// console.log(map.has('H'));
+// console.log(map.size);
+// // map.clear()
+
+
+// for (let [key, value] of map){
+//   console.log(key, value)
+// }
+
+// for (let key of map.keys()){// выдает ключи 
+//   console.log(key)
+// }
+
+// for (let value of map.values()){// выдает значения
+//   console.log( value)
+// }
+
+
+function createPhoneNumber(numbers){
+  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
 }
 
-console.log(checkSubstr('jjjjfjdkfdjfjdkfjka', 'a'))
-//или
-//i
-console.log(/love/i.test('i love you'));//не чувствителен к регистру можно все версии
-//g
-console.log('I love love you'.match(/love/g));//глобальный поиск вернет массив [love, love]
+const arrayOfNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 
-const str = `
-1 mn
-2 mn
-3 mn
-`
-
-
-console.log(str.match(/^\d/gm))//массив первых значений 
-console.log('I love you'.replace(/love/, 'like'));
-
-// \d любая цифра 
-// \w любая цифра,буква или пробел
-// \s пробед
-// \D любой символ кроме D
-// \W любой символ кроме W
-// \S любой символ кроме S
-// . любой символ кроме  /n
-
-// console.log(/\d/.test('1 man'))
-
-// ^ начало строки 
-// $ конец строки 
-
-// диапозоны
-
-
-//[sdr] любой символ
-//[0-9] диапозон от 0 - 9
-//[a-z] диапозон от a - z
-
-console.log(/[sdr]/.test('#'));
-
-
-
-//еще больше инфы  если надо (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
-
-const a = {
-  name:'alex',
-  age:18,
-  job:'Frontend dev'
-}
-
-const b = [
-  ['name', 'alex'],
-  ['age', 18],
-  ['job', 'Frontend dev']
-]
-
-// console.log(Object.entries(a));
-// console.log(Object.fromEntries(b));
-
-const map = new Map(b)
-console.log(map);
-console.log(map.get('job'));
-console.log(map.set('H', 'it is h'));
-console.log(map.delete('H'))
-console.log(map.has('H'));
-console.log(map.size);
-// map.clear()
-
-
-for (let [key, value] of map){
-  console.log(key, value)
-}
-
-for (let key of map.keys()){// выдает ключи 
-  console.log(key)
-}
-
-for (let value of map.values()){// выдает значения
-  console.log( value)
-}
+console.log(createPhoneNumber(arrayOfNumber))
