@@ -512,11 +512,11 @@ const firstPart = document.querySelector('.firstPart')
 //   console.log( value)
 // }
 
+// const array = Array.from()//делает массив из другово элемента 
 
-function createPhoneNumber(numbers){
-  return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
-}
-
-const arrayOfNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-
-console.log(createPhoneNumber(arrayOfNumber))
+const set = new Set([1,2,2,2,3,3,3,3,3,3,4,5,6,7,8,])//выведет [1,2,3,4,5,6,7,8]
+set.add(9)
+set.has(8)
+set.delete(9);
+//set.clear()
+console.log(Array.from(set) )
