@@ -521,10 +521,10 @@ const firstPart = document.querySelector('.firstPart')
 // //set.clear()
 // console.log(Array.from(set) )
  
-Object.prototype.ToLow = function(){
-  return this.toLowerCase()
-}
+// Object.prototype.ToLow = function(){
+//   return this.toLowerCase()
+// }
 
-const str = 'ABC'
+// const str = 'ABC'
 
-console.log(str.ToLow());//вернет abc
+// console.log(str.ToLow());//вернет abc
