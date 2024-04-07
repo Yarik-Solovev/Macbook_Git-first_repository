@@ -520,3 +520,11 @@ const firstPart = document.querySelector('.firstPart')
 // set.delete(9);
 // //set.clear()
 // console.log(Array.from(set) )
+ 
+Object.prototype.ToLow = function(){
+  return this.toLowerCase()
+}
+
+const str = 'ABC'
+
+console.log(str.ToLow());//вернет abc
