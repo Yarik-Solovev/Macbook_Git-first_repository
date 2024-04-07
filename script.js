@@ -278,7 +278,7 @@ const firstPart = document.querySelector('.firstPart')
   
 
 
- let data;
+//  let data;
 
 // // try и catch  ток с синхронныйм кодом
 
@@ -514,9 +514,9 @@ const firstPart = document.querySelector('.firstPart')
 
 // const array = Array.from()//делает массив из другово элемента 
 
-const set = new Set([1,2,2,2,3,3,3,3,3,3,4,5,6,7,8,])//выведет [1,2,3,4,5,6,7,8]
-set.add(9)
-set.has(8)
-set.delete(9);
-//set.clear()
-console.log(Array.from(set) )
+// const set = new Set([1,2,2,2,3,3,3,3,3,3,4,5,6,7,8,])//выведет [1,2,3,4,5,6,7,8]
+// set.add(9)
+// set.has(8)
+// set.delete(9);
+// //set.clear()
+// console.log(Array.from(set) )
