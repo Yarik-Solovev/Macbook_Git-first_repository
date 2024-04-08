@@ -529,27 +529,3 @@ const firstPart = document.querySelector('.firstPart')
 
 // console.log(str.ToLow());//вернет abc
 
-function XO(str) {
-  let a = 0;
-  let b = 0;
-    const strArray = str.split('')
-    strArray.forEach((el) => {
-      if(el === 'x' || el === 'X'){
-        a++
-      }
-      else if(el === 'o'|| el === 'O'){
-        b++
-      }
-      else if(!str.includes('o', 'x')){
-        return true
-      }
-    })
-    if(a === b){
-      return true
-    }
-    else {
-      return false
-    }
-}
-
-console.log(XO('ooom'));
