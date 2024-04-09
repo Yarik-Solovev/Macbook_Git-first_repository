@@ -529,3 +529,7 @@ const firstPart = document.querySelector('.firstPart')
 
 // console.log(str.ToLow());//вернет abc
 
+
+
+
+//git rebase better than merge
