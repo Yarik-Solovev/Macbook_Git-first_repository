@@ -533,3 +533,16 @@ const firstPart = document.querySelector('.firstPart')
 
 
 //git rebase better than merge
+
+// function someThink(){
+//   window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+// }
+// let header  = document.querySelector('.header')
+// header.addEventListener('click', someThink)
+
+
+// let text = document.querySelector('.forJs')
+// text.addEventListener('click', function(e) {
+//   e.stopPropagation()
+//   alert('It is not rickroll')
+// })
