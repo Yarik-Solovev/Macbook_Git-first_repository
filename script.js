@@ -562,6 +562,17 @@ const resultArrowFunc = arrowFunc('Alex')
 console.log(resultArrowFunc);
 
 
-a ||= b;//если а = false то тогда оно будет равно b
-a &&= b;//если а = true то тогда оно будет равно b
-a ??= b//если а = null or undefined то оно будет равно b~
+// a ||= b;//если а = false то тогда оно будет равно b
+// a &&= b;//если а = true то тогда оно будет равно b
+// a ??= b//если а = null or undefined то оно будет равно b
+
+// function findShort(s){
+//   let a = s.split(' ');
+//   let b = a.map(el =>  el.length)
+//   let c = Math.min(...b)
+//   console.log(...b)//выдаст нам 1 2 3 4 5
+//   console.log(b);//выдаст нам [1, 2, 3, 4, 5]
+//   return c
+//   }
+
+// console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
