@@ -562,3 +562,6 @@ const resultArrowFunc = arrowFunc('Alex')
 console.log(resultArrowFunc);
 
 
+a ||= b;//если а = false то тогда оно будет равно b
+a &&= b;//если а = true то тогда оно будет равно b
+a ??= b//если а = null or undefined то оно будет равно b~
