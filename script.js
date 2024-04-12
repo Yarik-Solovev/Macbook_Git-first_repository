@@ -361,14 +361,14 @@ const firstPart = document.querySelector('.firstPart')
 
 // const array = [1,2,3,4,5,]
 
-// Array.prototype.MultyNum = function(n){
+// Array.prototype.multyNum = function(n){
 //   return this.map((el) => {
 //     return el * n
 //   })
 // }
 
-// console.log(array.MultyNum(2))
-// console.log(array.MultyNum(5))
+// console.log(array.multyNum(2))
+// console.log(array.multyNum(5))
 
 
 //event loop 25 minutes
@@ -546,3 +546,19 @@ const firstPart = document.querySelector('.firstPart')
 //   e.stopPropagation()
 //   alert('It is not rickroll')
 // })
+
+
+function Pirat(name) {
+  return this.name = name;
+}
+const person =   new Pirat("Alice");
+console.log(person);
+
+const arrowFunc = (name) => {
+  return name
+}
+
+const resultArrowFunc = arrowFunc('Alex')
+console.log(resultArrowFunc);
+
+
