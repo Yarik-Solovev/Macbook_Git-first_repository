@@ -576,3 +576,7 @@ console.log(resultArrowFunc);
 //   }
 
 // console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
+
+
+const numberFormat = new Intl.NumberFormat('ru').format(1324.12)
+console.log(numberFormat);
