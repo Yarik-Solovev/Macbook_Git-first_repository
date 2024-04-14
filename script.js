@@ -578,5 +578,20 @@ console.log(resultArrowFunc);
 // console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
 
 
-const numberFormat = new Intl.NumberFormat('ru').format(1324.12)
+const numberFormat = new Intl.NumberFormat('en-US').format(1324.12)
 console.log(numberFormat);
+
+const c = 300;
+out = new Intl.NumberFormat('ru-Ru', {
+  style:'currency',
+  currency:'RUB'
+}).format(c)
+
+console.log(out);
+
+
+percent = new Intl.NumberFormat('ru-Ru', {
+  style: 'percent'
+}).format(0.55)
+
+console.log(percent);//выдатс 55
