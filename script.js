@@ -593,5 +593,4 @@ console.log(out);
 percent = new Intl.NumberFormat('ru-Ru', {
   style: 'percent'
 }).format(0.55)
-
 console.log(percent);//выдатс 55
