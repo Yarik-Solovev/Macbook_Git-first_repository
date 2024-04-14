@@ -594,3 +594,19 @@ percent = new Intl.NumberFormat('ru-Ru', {
   style: 'percent'
 }).format(0.55)
 console.log(percent);//выдатс 55
+
+
+const liter = new Intl.NumberFormat('en-Us', {
+  style:'unit',
+  unit:'liter',
+  unitDisplay:'narrow' //'narrow':'long':'short'будет выдавать 50L , 50 liters , 50 L
+}).format(50)
+
+console.log(liter);
+
+const speed = new Intl.NumberFormat('en-Us', {
+  style:'unit',
+  unit:'kilometer-per-hour'
+}).format(80)
+
+console.log(speed);
