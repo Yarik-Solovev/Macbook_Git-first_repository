@@ -548,65 +548,80 @@ const firstPart = document.querySelector('.firstPart')
 // })
 
 
-function Pirat(name) {
-  return this.name = name;
-}
-const person =   new Pirat("Alice");
-console.log(person);
+// function Pirat(name) {
+//   return this.name = name;
+// }
+// const person =   new Pirat("Alice");
+// console.log(person);
 
-const arrowFunc = (name) => {
-  return name
-}
+// const arrowFunc = (name) => {
+//   return name
+// }
 
-const resultArrowFunc = arrowFunc('Alex')
-console.log(resultArrowFunc);
+// const resultArrowFunc = arrowFunc('Alex')
+// console.log(resultArrowFunc);
 
 
-// a ||= b;//если а = false то тогда оно будет равно b
-// a &&= b;//если а = true то тогда оно будет равно b
-// a ??= b//если а = null or undefined то оно будет равно b
+// // a ||= b;//если а = false то тогда оно будет равно b
+// // a &&= b;//если а = true то тогда оно будет равно b
+// // a ??= b//если а = null or undefined то оно будет равно b
 
-// function findShort(s){
-//   let a = s.split(' ');
-//   let b = a.map(el =>  el.length)
-//   let c = Math.min(...b)
-//   console.log(...b)//выдаст нам 1 2 3 4 5
-//   console.log(b);//выдаст нам [1, 2, 3, 4, 5]
-//   return c
+// // function findShort(s){
+// //   let a = s.split(' ');
+// //   let b = a.map(el =>  el.length)
+// //   let c = Math.min(...b)
+// //   console.log(...b)//выдаст нам 1 2 3 4 5
+// //   console.log(b);//выдаст нам [1, 2, 3, 4, 5]
+// //   return c
+// //   }
+
+// // console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
+
+
+// const numberFormat = new Intl.NumberFormat('en-US').format(1324.12)
+// console.log(numberFormat);
+
+// const c = 300;
+// out = new Intl.NumberFormat('ru-Ru', {
+//   style:'currency',
+//   currency:'RUB'
+// }).format(c)
+
+// console.log(out);
+
+
+// percent = new Intl.NumberFormat('ru-Ru', {
+//   style: 'percent'
+// }).format(0.55)
+// console.log(percent);//выдатс 55
+
+
+// const liter = new Intl.NumberFormat('en-Us', {
+//   style:'unit',
+//   unit:'liter',
+//   unitDisplay:'narrow' //'narrow':'long':'short'будет выдавать 50L , 50 liters , 50 L
+// }).format(50)
+
+// console.log(liter);
+
+// const speed = new Intl.NumberFormat('en-Us', {
+//   style:'unit',
+//   unit:'kilometer-per-hour'
+// }).format(80)
+
+// console.log(speed);
+
+
+// const sum = {
+//   width:0,
+//   height:0,
+//    sumsmth (){
+//     return this.width + this.height
 //   }
+// }
+// const smth = {
+//   width:150,
+//   height:150,
+// }
 
-// console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
-
-
-const numberFormat = new Intl.NumberFormat('en-US').format(1324.12)
-console.log(numberFormat);
-
-const c = 300;
-out = new Intl.NumberFormat('ru-Ru', {
-  style:'currency',
-  currency:'RUB'
-}).format(c)
-
-console.log(out);
-
-
-percent = new Intl.NumberFormat('ru-Ru', {
-  style: 'percent'
-}).format(0.55)
-console.log(percent);//выдатс 55
-
-
-const liter = new Intl.NumberFormat('en-Us', {
-  style:'unit',
-  unit:'liter',
-  unitDisplay:'narrow' //'narrow':'long':'short'будет выдавать 50L , 50 liters , 50 L
-}).format(50)
-
-console.log(liter);
-
-const speed = new Intl.NumberFormat('en-Us', {
-  style:'unit',
-  unit:'kilometer-per-hour'
-}).format(80)
-
-console.log(speed);
+// console.log(sum.sumsmth.call(smth));
