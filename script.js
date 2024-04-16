@@ -625,3 +625,16 @@ const firstPart = document.querySelector('.firstPart')
 // }
 
 // console.log(sum.sumsmth.call(smth));
+
+// let a = null ?? 5;//если null, undefined
+// let b  = false || 52//если false
+
+// console.log(a, b);//5 52
+
+// let i = 0;
+// console.log(i++);//0
+// console.log(i++);//1
+// console.log('/'.repeat(100));
+// let o = 0;
+// console.log(++o);//1
+// console.log(++o);//2
