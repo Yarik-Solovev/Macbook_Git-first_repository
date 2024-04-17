@@ -638,3 +638,7 @@ const firstPart = document.querySelector('.firstPart')
 // let o = 0;
 // console.log(++o);//1
 // console.log(++o);//2
+
+// const numbers = Object.freeze([1,2,3,4,5,])
+// console.log(numbers);
+
