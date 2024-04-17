@@ -642,3 +642,36 @@ const firstPart = document.querySelector('.firstPart')
 // const numbers = Object.freeze([1,2,3,4,5,])
 // console.log(numbers);
 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+// console.log(new Date(2017, 0, 1, 15, 30, 0));
+// console.log(new Date('2017-01-01T15:30:10'));//чаще вот это  (ISO формат) 
+// console.log(new Date(1283620367001));//прошло с того монента тоже часто используются(timestamp)
+// console.log(Date.now());//чтобы получить  (timestamp) самое лучший вариант
+// const data = new Date();
+// console.log(data);
+// console.log(data.getTime());//чтобы получить  (timestamp)
+// console.log(data.toISOString());//получить дату в ISO  формате
+// // console.log(data.getSeconds());
+// // console.log(data.getMinutes());
+
+// console.log(data.getHours());
+// console.log(data.getUTCHours());//получить дату несчитая твоего местоположения (Москва  +3 часа)
+
+
+// console.log(data.getFullYear());
+
+// console.log(data.getDay());//получить какой день недели по счету  начиная с  нуля
+// console.log(data.getDate())//получить просто день
+
+// //виесто get можно поставить дату через set
+
+// console.log(new Date('2017-01-01T15:30:10Z'));//добавиться время относительно твоего местоположения типо москвадобавиться к дате 3 часа
+//америка добавиться к дате 8 часов
+
+// console.log(data.toLocaleDateString(//тут можно указать язык));//для строки учитавая твое местоположение
+// console.log(data.toDateString(en));//для строки
