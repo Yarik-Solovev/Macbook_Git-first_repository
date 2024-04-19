@@ -643,9 +643,7 @@ const firstPart = document.querySelector('.firstPart')
 // console.log(numbers);
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 
 // console.log(new Date(2017, 0, 1, 15, 30, 0));
@@ -662,16 +660,15 @@ const firstPart = document.querySelector('.firstPart')
 // console.log(data.getHours());
 // console.log(data.getUTCHours());//получить дату несчитая твоего местоположения (Москва  +3 часа)
 
-
 // console.log(data.getFullYear());
 
 // console.log(data.getDay());//получить какой день недели по счету  начиная с  нуля
 // console.log(data.getDate())//получить просто день
 
-// //виесто get можно поставить дату через set
+// //вместо get можно поставить дату через set
 
 // console.log(new Date('2017-01-01T15:30:10Z'));//добавиться время относительно твоего местоположения типо москвадобавиться к дате 3 часа
 //америка добавиться к дате 8 часов
 
-// console.log(data.toLocaleDateString(//тут можно указать язык));//для строки учитавая твое местоположение
+// console.log(data.toLocaleDateString(тут можно указать язык));//для строки учитавая твое местоположение
 // console.log(data.toDateString(en));//для строки
