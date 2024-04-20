@@ -672,3 +672,24 @@ const firstPart = document.querySelector('.firstPart')
 
 // console.log(data.toLocaleDateString(тут можно указать язык));//для строки учитавая твое местоположение
 // console.log(data.toDateString(en));//для строки
+
+
+// function oddOrEven(array) {
+//   if(array.length === 0 ){
+//     return 'even'
+//   }
+//   else{
+//  const result = array.reduce((num, el) => {
+//   return num + el
+//  })
+//  return result % 2 === 1||result % 2 === -1 ? 'odd':'even'
+// }
+// }
+
+//or
+
+// function oddOrEven(array){
+//   return array.reduce((a, b) => a + b,0) % 2 ? 'odd' : 'even'
+// }
+
+console.log(oddOrEven([1]));
