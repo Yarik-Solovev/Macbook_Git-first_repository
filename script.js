@@ -713,3 +713,17 @@ run()
 function logInfo(info){
   console.log(`The latitude of Moscow - ${info.latitude} `);
 }
+
+//можно через  async await
+
+async function runWithAsync(){
+  const data  = await fetch(url);
+  const info = await data.json()
+  logInfoWithAsync(info)
+}
+
+function logInfoWithAsync(info){
+  console.log(`The latitude of Moscow - ${info.latitude} `);
+}
+
+runWithAsync()
