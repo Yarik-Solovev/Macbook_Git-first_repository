@@ -693,3 +693,23 @@ const firstPart = document.querySelector('.firstPart')
 // }
 
 // console.log(oddOrEven([1]));
+
+
+const run = () => {
+  return new Promise((resolve, reject) => {
+    resolve(fetch(url))
+  })
+}
+
+
+run()
+  .then((data) => {
+    return data.json();
+  })
+  .then((info) => {
+    logInfo(info);
+  })
+
+function logInfo(info){
+  console.log(`The latitude of Moscow - ${info.latitude} `);
+}
