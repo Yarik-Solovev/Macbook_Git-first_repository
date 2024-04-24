@@ -728,3 +728,12 @@ const firstPart = document.querySelector('.firstPart')
 
 // runWithAsync()
 
+const headerButton = document.querySelector('.header_button')
+
+headerButton.addEventListener('click', createMenu);
+
+function createMenu(){
+  const menu = document.createElement('div');
+  menu.className = 'main__menu'
+  document.body.prepend(menu)
+}
