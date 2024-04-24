@@ -59,8 +59,8 @@ body {
 }
 
 .header_button img{
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
 }
 
 .main {
@@ -98,6 +98,13 @@ body {
     color:white
 }
 
+.main__menu{
+    width: 1000px;
+    height: 1000px;
+    background-color: black;
+    animation: 2s moveMenu ease;
+    position: absolute;   
+}
 
 
 
@@ -111,8 +118,14 @@ body {
 
 
 
-
-
+@keyframes moveMenu {
+    from {
+        transition: translateX(100px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
 
 
 @keyframes moveA {

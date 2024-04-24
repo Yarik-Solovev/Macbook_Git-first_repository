@@ -695,35 +695,36 @@ const firstPart = document.querySelector('.firstPart')
 // console.log(oddOrEven([1]));
 
 
-const run = () => {
-  return new Promise((resolve, reject) => {
-    resolve(fetch(url))
-  })
-}
+// const run = () => {
+//   return new Promise((resolve, reject) => {
+//     resolve(fetch(url))
+//   })
+// }
 
 
-run()
-  .then((data) => {
-    return data.json();
-  })
-  .then((info) => {
-    logInfo(info);
-  })
+// run()
+//   .then((data) => {
+//     return data.json();
+//   })
+//   .then((info) => {
+//     logInfo(info);
+//   })
 
-function logInfo(info){
-  console.log(`The latitude of Moscow - ${info.latitude} `);
-}
+// function logInfo(info){
+//   console.log(`The latitude of Moscow - ${info.latitude} `);
+// }
 
-//можно через  async await
+// //можно через  async await
 
-async function runWithAsync(){
-  const data  = await fetch(url);
-  const info = await data.json()
-  logInfoWithAsync(info)
-}
+// async function runWithAsync(){
+//   const data  = await fetch(url);
+//   const info = await data.json()
+//   logInfoWithAsync(info)
+// }
 
-function logInfoWithAsync(info){
-  console.log(`The latitude of Moscow - ${info.latitude} `);
-}
+// function logInfoWithAsync(info){
+//   console.log(`The latitude of Moscow - ${info.latitude} `);
+// }
 
-runWithAsync()
+// runWithAsync()
+
