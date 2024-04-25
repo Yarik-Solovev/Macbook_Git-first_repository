@@ -732,8 +732,26 @@ const headerButton = document.querySelector('.header_button')
 
 headerButton.addEventListener('click', createMenu);
 
+const menu = document.createElement('div');
+menu.className = 'main__menu'
+
+menu.innerHTML=`
+<button style='width:100px; height:100px;' class='innerButton'>закрыть</button>
+`
+menu.style.cssText=`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  `
+
 function createMenu(){
-  const menu = document.createElement('div');
-  menu.className = 'main__menu'
-  document.body.prepend(menu)
+
+  document.body.prepend(menu);
+  const el = document.querySelector('.main__menu')
+  const innerButton = document.querySelector('.innerButton');
+  innerButton.addEventListener('click', deleteMenu);
+  function deleteMenu(){
+    el.remove()
+  }
 }
+
