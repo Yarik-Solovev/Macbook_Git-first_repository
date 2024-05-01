@@ -175,7 +175,7 @@
 //                 return data.json();
 //                 }
 //                 else{
-//                     console.error('ты ишак')
+//                     console.error('Ошибка')
 //                 }
 //             })
 //             .then((info) => {
@@ -754,9 +754,24 @@ function createMenu(){
     el.remove()
   }
 }
-const train = [1, 2, 3, 4, 5]
-let i = 0
-const result = train.forEach((el) => {
-     i += el
-})
-console.log(i);
+
+let a = 144
+a % 2 === 1 ? console.log('Нечетное') : console.log('Четное');
+
+var number=function(array){
+  let i = 1
+  const a =  array.map(el => `${i++}: ${el}`)
+  return a
+}
+console.log(number(["a", "b", "c"]))
+
+var isSquare = function(n){
+  if(Math.sqrt(n) ** 2 === n){
+    return true
+  }
+  else{
+    return false
+  }
+}
+
+console.log(isSquare(44));
