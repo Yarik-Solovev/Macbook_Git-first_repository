@@ -754,3 +754,9 @@ function createMenu(){
     el.remove()
   }
 }
+const train = [1, 2, 3, 4, 5]
+let i = 0
+const result = train.forEach((el) => {
+     i += el
+})
+console.log(i);
