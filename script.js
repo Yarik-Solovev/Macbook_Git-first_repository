@@ -800,3 +800,7 @@ newStr.forEach((el) => {
 })
 console.log(result.join(''))
 
+const num = '63829983432984289347293874';
+const numTwo = '90938498237058927340892374089'
+const res = BigInt(num)+ BigInt(numTwo)
+console.log(res.toString());
