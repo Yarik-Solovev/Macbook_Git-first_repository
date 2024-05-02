@@ -775,3 +775,28 @@ var isSquare = function(n){
 }
 
 console.log(isSquare(44));
+
+const rt = ('I love Sally').match(/[a-z]/g)
+console.log(rt.length);
+
+const str = 'AATT'
+const newStr = str.split('');
+const result = []; 
+newStr.forEach((el) => {
+  switch (el) {
+    case 'A':
+      result.push('T')
+      break;
+      case 'T':
+        result.push('A')
+        break;
+        case 'C':
+          result.push('G')
+          break;
+          case 'G':
+            result.push('C')
+            break;
+  }
+})
+console.log(result.join(''))
+
