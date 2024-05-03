@@ -804,3 +804,19 @@ const num = '63829983432984289347293874';
 const numTwo = '90938498237058927340892374089'
 const res = BigInt(num)+ BigInt(numTwo)
 console.log(res.toString());
+
+function sumIntervals(intervals) {
+  const arr = intervals.flat();
+  console.log(arr)
+  if(arr.length === 2){
+    return arr[1] - arr[0]
+  }
+  else if(arr.length === 4){
+    return (arr[1] - arr[0]) + (arr[3] - arr[2])
+  }
+   else if(arr.length === 6){
+    return( (arr[1] - arr[0]) + (arr[3] - arr[2]) + (arr[5] - arr[4]))
+  }
+}
+
+console.log(sumIntervals([[1,4],[7, 10],[3, 5]]));
