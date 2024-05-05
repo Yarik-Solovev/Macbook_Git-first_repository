@@ -755,68 +755,90 @@ function createMenu(){
   }
 }
 
-let a = 144
-a % 2 === 1 ? console.log('Нечетное') : console.log('Четное');
+// let a = 144
+// a % 2 === 1 ? console.log('Нечетное') : console.log('Четное');
 
-var number=function(array){
-  let i = 1
-  const a =  array.map(el => `${i++}: ${el}`)
-  return a
-}
-console.log(number(["a", "b", "c"]))
+// var number=function(array){
+//   let i = 1
+//   const a =  array.map(el => `${i++}: ${el}`)
+//   return a
+// }
+// console.log(number(["a", "b", "c"]))
 
-var isSquare = function(n){
-  if(Math.sqrt(n) ** 2 === n){
-    return true
+// var isSquare = function(n){
+//   if(Math.sqrt(n) ** 2 === n){
+//     return true
+//   }
+//   else{
+//     return false
+//   }
+// }
+
+// console.log(isSquare(44));
+
+// const rt = ('I love Sally').match(/[a-z]/g)
+// console.log(rt.length);
+
+// const str = 'AATT'
+// const newStr = str.split('');
+// const result = []; 
+// newStr.forEach((el) => {
+//   switch (el) {
+//     case 'A':
+//       result.push('T')
+//       break;
+//       case 'T':
+//         result.push('A')
+//         break;
+//         case 'C':
+//           result.push('G')
+//           break;
+//           case 'G':
+//             result.push('C')
+//             break;
+//   }
+// })
+// console.log(result.join(''))
+
+// const num = '63829983432984289347293874';
+// const numTwo = '90938498237058927340892374089'
+// const res = BigInt(num)+ BigInt(numTwo)
+// console.log(res.toString());
+
+// function sumIntervals(intervals) {
+//   const arr = intervals.flat();
+//   console.log(arr)
+//   if(arr.length === 2){
+//     return arr[1] - arr[0]
+//   }
+//   else if(arr.length === 4){
+//     return (arr[1] - arr[0]) + (arr[3] - arr[2])
+//   }
+//    else if(arr.length === 6){
+//     return( (arr[1] - arr[0]) + (arr[3] - arr[2]) + (arr[5] - arr[4]))
+//   }
+// }
+
+// console.log(sumIntervals([[1,4],[7, 10],[3, 5]]));
+
+
+  
+  function zeros (n) {
+    const w = n;
+    if(w < 5){
+      return 0
+    }
+    else if( w >= 100){
+      return( Math.floor(w / 4) - 1)
+    }
+    else if(w >= 25){
+      return (Math.floor(w / 5) + 1)
+    }
+    
+    else{
+      
+       return( Math.floor(w / 5))
+    }
   }
-  else{
-    return false
-  }
-}
 
-console.log(isSquare(44));
-
-const rt = ('I love Sally').match(/[a-z]/g)
-console.log(rt.length);
-
-const str = 'AATT'
-const newStr = str.split('');
-const result = []; 
-newStr.forEach((el) => {
-  switch (el) {
-    case 'A':
-      result.push('T')
-      break;
-      case 'T':
-        result.push('A')
-        break;
-        case 'C':
-          result.push('G')
-          break;
-          case 'G':
-            result.push('C')
-            break;
-  }
-})
-console.log(result.join(''))
-
-const num = '63829983432984289347293874';
-const numTwo = '90938498237058927340892374089'
-const res = BigInt(num)+ BigInt(numTwo)
-console.log(res.toString());
-
-function sumIntervals(intervals) {
-  const arr = intervals.flat();
-  console.log(arr)
-  if(arr.length === 2){
-    return arr[1] - arr[0]
-  }
-  else if(arr.length === 4){
-    return (arr[1] - arr[0]) + (arr[3] - arr[2])
-  }
-   else if(arr.length === 6){
-    return( (arr[1] - arr[0]) + (arr[3] - arr[2]) + (arr[5] - arr[4]))
-  }
-}
-
-console.log(sumIntervals([[1,4],[7, 10],[3, 5]]));
+console.log(zeros(100));
