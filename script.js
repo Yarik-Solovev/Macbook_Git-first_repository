@@ -842,3 +842,17 @@ function createMenu(){
   }
 
 console.log(zeros(100));
+
+const  HTMLFinallPrice = document.querySelector('.example__result')
+const example__price = document.querySelector('.example__price')
+const example__button = document.querySelector('.example__button')
+const price = Number(example__price.textContent)
+let counter = 1;
+
+ example__button.addEventListener('click', getRes);
+
+ function getRes(){
+   counter++
+   HTMLFinallPrice.textContent=`${counter * price}`
+}
+

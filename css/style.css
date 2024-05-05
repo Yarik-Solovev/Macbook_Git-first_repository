@@ -71,6 +71,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 0 auto 50px auto;
 }
 
 .firstPart {
@@ -99,8 +100,8 @@ body {
 }
 
 .main__menu{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     animation: 2s moveMenu ease;
     position: absolute;   
@@ -127,4 +128,38 @@ body {
     .header_button{
         display: none;
     }
+}
+
+.example{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.hed{
+    width: 300px;
+    height: 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fot{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.example__res{
+    width: 300px;
+    height: 30px;
+}
+
+.example__res-text{
+    margin: 0;
+    
+    margin: 0 0  0 40px;
+   
 }
