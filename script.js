@@ -856,3 +856,4 @@ let counter = 1;
    HTMLFinallPrice.textContent=`${counter * price}`
 }
 
+console.log('скоро начина. учить Node.js')
