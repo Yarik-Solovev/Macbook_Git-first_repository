@@ -858,8 +858,10 @@ second__example__button.addEventListener('click', secondGetRes);
    HTMLFinallPrice.textContent=`${ price * counter}`
 }
 function secondGetRes(){
-  HTMLFinallPrice.textContent=`${price * counter - price * secondCounter}`
-  counter--
+  if(price * counter - price * secondCounter > 0){
+    HTMLFinallPrice.textContent=`${price * counter - price * secondCounter}`
+    counter--
+    } 
 }
 
 
