@@ -845,15 +845,21 @@ console.log(zeros(100));
 
 const  HTMLFinallPrice = document.querySelector('.example__result')
 const example__price = document.querySelector('.example__price')
-const example__button = document.querySelector('.example__button')
+const example__button = document.querySelector('.example__button');
+const second__example__button = document.querySelector('.example__button2')
 const price = Number(example__price.textContent)
 let counter = 1;
-
+let secondCounter = 1;
  example__button.addEventListener('click', getRes);
+second__example__button.addEventListener('click', secondGetRes);
 
  function getRes(){
    counter++
-   HTMLFinallPrice.textContent=`${counter * price}`
+   HTMLFinallPrice.textContent=`${ price * counter}`
+}
+function secondGetRes(){
+  HTMLFinallPrice.textContent=`${price * counter - price * secondCounter}`
+  counter--
 }
 
-console.log('скоро начина. учить Node.js')
+
