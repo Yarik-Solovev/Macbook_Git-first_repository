@@ -259,7 +259,17 @@ const button = document.querySelector('.secondPartButton');
 
 button.addEventListener('click', getWeatherInfo)
 
-
+function startAnimation(){
+  divInfo.style.cssText=`
+  background-image: url('../img/cat.gif');
+  `
+ }
+ 
+ function endAnimation(){
+   divInfo.style.cssText=`
+  background-image: none;
+  `
+ }
 
 const divInfo = document.querySelector('.info');
  async function getWeatherInfo() {
