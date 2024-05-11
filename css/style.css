@@ -65,8 +65,8 @@ body {
 
 .main {
     background-color: black;
-    width: 250px;
-    height: 300px;
+    width: 550px;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,19 +84,32 @@ body {
 
 .secondPart {
     width: 250px;
-    height: 150px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 50px 0;
 }
 
 .secondPartButton {
-    width: 150px;
-    height: 100px;
+    width: 250px;
+    height: 200px;
+    font-size: 18px;
+    font-weight: 600;
+ 
 }
 
 .info{
-    color:white
+    color:white;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 600;
+ 
 }
 
 .main__menu{
@@ -159,7 +172,6 @@ body {
 
 .example__res-text{
     margin: 0;
-    
     margin: 0 0  0 40px;
-   
 }
+

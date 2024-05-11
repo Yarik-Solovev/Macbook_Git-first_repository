@@ -253,27 +253,24 @@
 
 const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
 
+const firstPart = document.querySelector('.firstPart');
 
+const button = document.querySelector('.secondPartButton');
+
+button.addEventListener('click', getWeatherInfo)
+
+
+
+const divInfo = document.querySelector('.info');
  async function getWeatherInfo() {
      const data = await fetch(url);
      const info = await data.json();
-     renderCurrentInterval(info.current.interval) 
-     
+     divInfo.textContent=`${info.current.interval}`
+     button.removeEventListener('click', getWeatherInfo)
     }
 
-const firstPart = document.querySelector('.firstPart')
-
-  function renderCurrentInterval (information) {
-    const div = document.createElement('div');
-    div.textContent=`${information}`
-    div.className='info'
-    firstPart.append(div);
-    button.removeEventListener('click', getWeatherInfo)
-  }
 
 
-  const button = document.querySelector('.secondPartButton')
-  button.addEventListener('click', getWeatherInfo)
 
   
 
@@ -862,6 +859,11 @@ function secondGetRes(){
     HTMLFinallPrice.textContent=`${price * counter - price * secondCounter}`
     counter--
     } 
-}
+};
+
+// async function errorCatch(){
+//   const data = await fetch(asdfghjkl).catch((er) => {console.log(er);})
+// }
 
 
+// console.log(errorCatch());
