@@ -109,12 +109,15 @@ body {
     align-items: center;
     font-size: 25px;
     font-weight: 600;
+    border-radius: 50%;
  
 }
 
 .main__menu{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
     background-color: black;
     animation: 2s moveMenu ease;
     position: absolute;   

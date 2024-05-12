@@ -282,11 +282,6 @@ function startAnimation(){
     }
 
 
-
-
-  
-
-
 //  let data;
 
 // // try и catch  ток с синхронныйм кодом
