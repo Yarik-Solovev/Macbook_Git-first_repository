@@ -827,25 +827,25 @@ function createMenu(){
 
 
   
-  function zeros (n) {
-    const w = n;
-    if(w < 5){
-      return 0
-    }
-    else if( w >= 100){
-      return( Math.floor(w / 4) - 1)
-    }
-    else if(w >= 25){
-      return (Math.floor(w / 5) + 1)
-    }
+//   function zeros (n) {
+//     const w = n;
+//     if(w < 5){
+//       return 0
+//     }
+//     else if( w >= 100){
+//       return( Math.floor(w / 4) - 1)
+//     }
+//     else if(w >= 25){
+//       return (Math.floor(w / 5) + 1)
+//     }
     
-    else{
+//     else{
       
-       return( Math.floor(w / 5))
-    }
-  }
+//        return( Math.floor(w / 5))
+//     }
+//   }
 
-console.log(zeros(100));
+// console.log(zeros(100));
 
 const  HTMLFinallPrice = document.querySelector('.example__result')
 const example__price = document.querySelector('.example__price')
