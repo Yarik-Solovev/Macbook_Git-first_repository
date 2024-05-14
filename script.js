@@ -874,3 +874,11 @@ function secondGetRes(){
 
 
 // console.log(errorCatch());
+
+function sortArray(arr){
+  const res = arr.map((el) => {return el * el})
+  return res.sort((a, b) => a - b)
+}
+
+console.log(sortArray([-4, -1, 0, 3, 10,]));
+console.log(sortArray([-7, -3, 2, 3, 11,]));
