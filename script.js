@@ -880,7 +880,7 @@ var isEmpty = function(obj) {
 
 console.log(isEmpty({"х": 5, "у": 42}));
 
- function sleep(millis) {
+function sleep(millis) {
   return  new Promise((res,rej) => {
     setTimeout(() => {
       res(52) 
