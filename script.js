@@ -873,3 +873,19 @@ function sortArray(arr){
 
 console.log(sortArray([-4, -1, 0, 3, 10,]));
 console.log(sortArray([-7, -3, 2, 3, 11,]));
+
+var isEmpty = function(obj) {
+  return JSON.stringify(obj).length > 2 ? false : true
+}
+
+console.log(isEmpty({"х": 5, "у": 42}));
+
+ function sleep(millis) {
+  return  new Promise((res,rej) => {
+    setTimeout(() => {
+      res(52) 
+    },millis)
+  })
+}
+
+console.log(sleep(100));
