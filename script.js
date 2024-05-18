@@ -889,3 +889,17 @@ function sleep(millis) {
 }
 
 console.log(sleep(100));
+
+Array.prototype.last = function() {
+   if(this.length === 0){
+    return 
+   }
+   else{
+    const i =  this.length
+    return this[i - 1]
+   }
+};
+
+const arr = [1,2,3,];
+
+console.log( arr.last())
