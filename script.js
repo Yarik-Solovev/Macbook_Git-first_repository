@@ -727,20 +727,19 @@ const headerButton = document.querySelector('.header_button')
 
 headerButton.addEventListener('click', createMenu);
 
-const menu = document.createElement('div');
-menu.className = 'main__menu'
 
-menu.innerHTML=`
-<button style='width:100px; height:100px;' class='innerButton'>закрыть</button>
-`
-menu.style.cssText=`
+
+function createMenu(){
+  const menu = document.createElement('div');
+  menu.className = 'main__menu'
+  menu.innerHTML=`
+  <button style='width:100px; height:100px;' class='innerButton'>закрыть</button>
+  `
+  menu.style.cssText=`
   display:flex;
   justify-content:center;
   align-items:center;
   `
-
-function createMenu(){
-
   document.body.prepend(menu);
   const el = document.querySelector('.main__menu')
   const innerButton = document.querySelector('.innerButton');
@@ -843,7 +842,7 @@ const example__price = document.querySelector('.example__price')
 const example__button = document.querySelector('.example__button');
 const second__example__button = document.querySelector('.example__button2')
 const price = Number(example__price.textContent)
-let counter = 1;
+let counter = parseInt(example__price.dataset.counterPrice)
 let secondCounter = 1;
  example__button.addEventListener('click', getRes);
 second__example__button.addEventListener('click', secondGetRes);
@@ -903,3 +902,9 @@ Array.prototype.last = function() {
 const arr = [1,2,3,];
 
 console.log( arr.last())
+
+const el = 52
+console.log(el.toString());
+console.log(String(el));
+
+console.log(25 + 15 + 13 + 38);
