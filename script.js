@@ -865,46 +865,46 @@ function secondGetRes(){
 
 // console.log(errorCatch());
 
-function sortArray(arr){
-  const res = arr.map((el) => {return el * el})
-  return res.sort((a, b) => a - b)
-}
+// function sortArray(arr){
+//   const res = arr.map((el) => {return el * el})
+//   return res.sort((a, b) => a - b)
+// }
 
-console.log(sortArray([-4, -1, 0, 3, 10,]));
-console.log(sortArray([-7, -3, 2, 3, 11,]));
+// console.log(sortArray([-4, -1, 0, 3, 10,]));
+// console.log(sortArray([-7, -3, 2, 3, 11,]));
 
-var isEmpty = function(obj) {
-  return JSON.stringify(obj).length > 2 ? false : true
-}
+// var isEmpty = function(obj) {
+//   return JSON.stringify(obj).length > 2 ? false : true
+// }
 
-console.log(isEmpty({"х": 5, "у": 42}));
+// console.log(isEmpty({"х": 5, "у": 42}));
 
-function sleep(millis) {
-  return  new Promise((res,rej) => {
-    setTimeout(() => {
-      res(52) 
-    },millis)
-  })
-}
+// function sleep(millis) {
+//   return  new Promise((res,rej) => {
+//     setTimeout(() => {
+//       res(52) 
+//     },millis)
+//   })
+// }
 
-console.log(sleep(100));
+// console.log(sleep(100));
 
-Array.prototype.last = function() {
-   if(this.length === 0){
-    return 
-   }
-   else{
-    const i =  this.length
-    return this[i - 1]
-   }
-};
+// Array.prototype.last = function() {
+//    if(this.length === 0){
+//     return 
+//    }
+//    else{
+//     const i =  this.length
+//     return this[i - 1]
+//    }
+// };
 
-const arr = [1,2,3,];
+// const arr = [1,2,3,];
 
-console.log( arr.last())
+// console.log( arr.last())
 
-const el = 52
-console.log(el.toString());
-console.log(String(el));
+// const el = 52
+// console.log(el.toString());
+// console.log(String(el));
 
-console.log(25 + 15 + 13 + 38);
+// console.log(25 + 15 + 13 + 38);
