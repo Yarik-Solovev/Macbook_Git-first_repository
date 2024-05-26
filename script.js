@@ -843,7 +843,6 @@ const example__button = document.querySelector('.example__button');
 const second__example__button = document.querySelector('.example__button2')
 const price = Number(example__price.textContent)
 let counter = parseInt(example__price.dataset.counterPrice)
-let secondCounter = 1;
  example__button.addEventListener('click', getRes);
 second__example__button.addEventListener('click', secondGetRes);
 
@@ -852,8 +851,8 @@ second__example__button.addEventListener('click', secondGetRes);
    HTMLFinallPrice.textContent=`${ price * counter}`
 }
 function secondGetRes(){
-  if(price * counter - price * secondCounter > 0){
-    HTMLFinallPrice.textContent=`${price * counter - price * secondCounter}`
+  if(price * counter - price > 0){
+    HTMLFinallPrice.textContent=`${price * counter - price}`
     counter--
     } 
 };
@@ -908,3 +907,16 @@ function secondGetRes(){
 // console.log(String(el));
 
 // console.log(25 + 15 + 13 + 38);
+
+// СРЕДНИЕ ЗНАЧЕНИЯ И ДИСПЕРСИИ ИНТЕРФЕРЕНЦИОННЫХ ОПЕРАТОРОВ
+// СВЕТОДЕЛИТЕЛЯ И ТРИГОНОМЕТРИЧЕСКИХ ОПЕРАТОРОВ
+// РАЗНОСТИ ФАЗ КВАНТОВЫХ ЭЛЕКТРОМАГНИТНЫХ ПОЛЕЙ В
+// ФОКОВСКИХ И КОГЕРЕНТНЫХ
+// СОСТОЯНИЯХ
+
+const about = document.querySelector('#header_ul_li-a')
+about.addEventListener('click', newColor);
+
+function newColor(){
+  about.className='header_ul_li-a'
+}
