@@ -914,9 +914,9 @@ function secondGetRes(){
 // ФОКОВСКИХ И КОГЕРЕНТНЫХ
 // СОСТОЯНИЯХ
 
-const about = document.querySelector('#header_ul_li-a')
+const about = document.querySelector('.header__ul__li__a')
 about.addEventListener('click', newColor);
 
 function newColor(){
-  about.className='header_ul_li-a'
+  about.className='header__ul__li__a--active'
 }
