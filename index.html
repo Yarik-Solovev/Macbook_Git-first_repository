@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Working on Macbook</title>
+    <link rel="icon" href="img/cat.gif">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,12 @@
     <ul class = 'header_ul'>
         <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Home</a></li>
         <li><a href="#" class="header__ul__li__a">About</a></li>
-        <li><a href="#">Footer</a></li>
+        <li>
+            <select>
+            <option><a href="#" >Footer</a></option>
+            <option selected><a href="#">NotFooter</a></option>
+            </select>
+        </li>
     </ul>
     
         <button class="header_button">
@@ -32,7 +38,7 @@
 
 <div class="main">
     
-    <div class="secondPart">
+    <div class="secondPart" >
         <button class="secondPartButton">find out the current interval</button>
     </div>
     <div class="firstPart">
@@ -58,9 +64,15 @@
     </div>
 </div>
 
-
 <script  src="script.js"> </script>
 
 </body>
 
 </html>
+<!-- 
+<form>
+<input required type="text" placeholder='Введите имя'>
+<button>Отправить</button> 
+</form>
+Если поле ввода пустое ничего не отправиться и выйдет подсказка
+-->

@@ -727,8 +727,6 @@ const headerButton = document.querySelector('.header_button')
 
 headerButton.addEventListener('click', createMenu);
 
-
-
 function createMenu(){
   const menu = document.createElement('div');
   menu.className = 'main__menu'
@@ -920,3 +918,9 @@ about.addEventListener('click', newColor);
 function newColor(){
   about.className='header__ul__li__a--active'
 }
+
+// //IIFE
+// (function(){
+//   const privateConst = 1;
+// })()
+// console.log(privateConst);//undefined
