@@ -924,3 +924,8 @@ function newColor(){
 //   const privateConst = 1;
 // })()
 // console.log(privateConst);//undefined
+
+//        [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+
+//           nvm install 22.2.0
+
