@@ -929,3 +929,17 @@ function newColor(){
 
 //           nvm install 22.2.0
 
+const justButton = document.querySelector('.button');
+const  justInput = document.querySelector('.inputHeight')
+const  justInput2 = document.querySelector('.inputWeight')
+justButton.addEventListener('click', getResult);
+function getResult(info){
+  if(justInput.value > 100 && justInput2.value > 30){
+  let res = justInput2.value * 10000 / (justInput.value * justInput.value)
+  alert(res.toFixed(1))
+  }
+  else{
+    alert('Чёт Маловато')
+  }
+}
+
