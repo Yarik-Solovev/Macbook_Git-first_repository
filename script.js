@@ -538,10 +538,6 @@ function startAnimation(){
 
 //git rebase better than merge
 
-const link = document.querySelector('.header_ul li a');
-link.addEventListener('click', function(event){
-  event.preventDefault()
-})
 
 // function Pirat(name) {
 //   return this.name = name;
@@ -933,13 +929,44 @@ const justButton = document.querySelector('.button');
 const  justInput = document.querySelector('.inputHeight')
 const  justInput2 = document.querySelector('.inputWeight')
 justButton.addEventListener('click', getResult);
-function getResult(info){
-  if(justInput.value > 100 && justInput2.value > 30){
-  let res = justInput2.value * 10000 / (justInput.value * justInput.value)
-  alert(res.toFixed(1))
+let prefValue = justInput.value
+let secondPrefValue = justInput2.value
+justInput.addEventListener('input', noWord)
+justInput2.addEventListener('input', secondNoWord)
+function secondNoWord(e) {
+  const userData = e.target.value;
+  if(/[a-zа-я]/i.test(userData)){
+    justInput2.value = secondPrefValue;
+    return
   }
   else{
-    alert('Чёт Маловато')
+    justInput2.value = userData;
+    secondPrefValue = userData;
   }
 }
+function noWord(e){
+  const userData = e.target.value;
+  if(/[a-zа-я]/i.test(userData)){
+    justInput.value = prefValue;
+    return
+  }
+  else{
+    justInput.value = userData;
+    prefValue = userData;
+  }
+}
+function getResult(e){
+    if(justInput.value > 100 && justInput2.value > 30){
+    let res = justInput2.value * 10000 / (justInput.value * justInput.value)
+    alert(res.toFixed(1))
+    }
+    else{
+      alert('Чёт Маловато')
+    }
+  }
+
+document.querySelector('.img-span').addEventListener('click', function(e){
+  window.location.href='https://youtu.be/dQw4w9WgXcQ?si=u_b1sgh6v1zvLen4'
+})
+
 
