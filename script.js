@@ -969,4 +969,17 @@ document.querySelector('.img-span').addEventListener('click', function(e){
   window.location.href='https://youtu.be/dQw4w9WgXcQ?si=u_b1sgh6v1zvLen4'
 })
 
-
+let ul_liCounter = 1
+const header_ul_li = document.querySelector('.header_ul_li')
+header_ul_li.addEventListener('click', function(e){
+  let i = 45;
+  i = i * ul_liCounter
+  ul_liCounter++
+  header_ul_li.style.cssText=`
+  transform: rotate(${i}deg);
+  text-decoration: none;
+  color: black;
+  font-size: 23px;
+  font-weight: 600;
+  `
+})

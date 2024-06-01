@@ -23,19 +23,20 @@ body {
     text-decoration: none;
    animation: 2s moveA ease;
    transition: transform 0.5s ease;
+   
 }
 
 .header_ul li:hover{
     transform:scale(1.05);
 }
 
+
+
 .header_ul li a {
     text-decoration: none;
     color: black;
     font-size: 23px;
     font-weight: 600;
-    
-    
 }
 
 .img-span {
