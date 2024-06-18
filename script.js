@@ -754,7 +754,7 @@ function createMenu(){
 // console.log(number(["a", "b", "c"]))
 
 // var isSquare = function(n){
-//   if(Math.sqrt(n) ** 2 === n){
+//   if(Math.sqrt(n) * 2 === n){
 //     return true
 //   }
 //   else{
@@ -882,19 +882,19 @@ function secondGetRes(){
 
 // console.log(sleep(100));
 
-// Array.prototype.last = function() {
-//    if(this.length === 0){
-//     return 
-//    }
-//    else{
-//     const i =  this.length
-//     return this[i - 1]
-//    }
-// };
+Array.prototype.last = function() {
+   if(this.length === 0){
+    return 
+   }
+   else{
+    const i =  this.length;
+    return this[i - 1]
+   }
+};
 
-// const arr = [1,2,3,];
+const arr = [1,2,3,4,];
 
-// console.log( arr.last())
+console.log( arr.last())
 
 // const el = 52
 // console.log(el.toString());
