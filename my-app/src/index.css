@@ -41,3 +41,9 @@
     margin-right: 70px;
     border: 2px solid;
 }
+
+.userSpan{
+    display: inline-block;
+    margin-right: 30px;
+    
+}

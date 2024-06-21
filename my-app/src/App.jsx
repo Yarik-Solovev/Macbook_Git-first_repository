@@ -1,12 +1,36 @@
 import React from "react";
+import UsersName from "./UserName";
 import './index.css'
 
+
 function Header(){
-   const Users = [
+   let Users = [
     {Name: 'Alex', id: '1', passport:'123'},
     {Name:'Ivan', id: '2', passport:'52'}
     ];
-
+    function changeName(id, newName){
+    Users = Users.map(user => {
+      if(user.id === id){
+        return {
+          ...user,
+          Name:newName
+        } 
+      }
+      return user
+    })
+    }
+    const data = []
+    Users.forEach((user) => {
+      data.push(
+        <div key={user.id} className="userSpan">
+            <UsersName 
+            User={user.Name}
+            changeName={changeName}
+            />
+        </div>
+      
+      )
+    })
 //    const res = [];
 //    for(let i = 0;i < Users.length;i++){
 //     const el = Users[i];
@@ -30,13 +54,7 @@ function Header(){
         <ul className="header__ul">
             <li>Home</li>
             <li>About</li>
-            {Users.map(el => {
-                return (
-                <div key={el.id}>
-                     <li>{el.Name}</li>
-                </div>
-                )
-            })}
+            <li>{data}</li>
         </ul>
         <button className="header__button">Просто кнопка</button>
     </div>
