@@ -4,11 +4,7 @@ import './index.css'
 
 
 function Header(){
-   let Users = [
-    {Name: 'Alex', id: '1', passport:'123'},
-    {Name:'Ivan', id: '2', passport:'52'}
-    ];
-    function changeName(id, newName){
+  function changeName(id, newName){
     Users = Users.map(user => {
       if(user.id === id){
         return {
@@ -19,6 +15,10 @@ function Header(){
       return user
     })
     }
+   let Users = [
+    {Name: 'Alex', id: '1', passport:'123'},
+    {Name:'Ivan', id: '2', passport:'52'}
+    ];
     const data = []
     Users.forEach((user) => {
       data.push(
@@ -54,9 +54,9 @@ function Header(){
         <ul className="header__ul">
             <li>Home</li>
             <li>About</li>
-            <li>{data}</li>
+           {data}
         </ul>
-        <button className="header__button">Просто кнопка</button>
+        <button className="header__button" onChange={(event) => {console.log(event);}}>Просто кнопка</button>
     </div>
     )
 }
