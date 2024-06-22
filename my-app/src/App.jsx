@@ -1,36 +1,47 @@
 import React from "react";
-import UsersName from "./UserName";
 import './index.css'
 
 
 function Header(){
-  function changeName(id, newName){
-    Users = Users.map(user => {
-      if(user.id === id){
-        return {
-          ...user,
-          Name:newName
-        } 
-      }
-      return user
-    })
-    }
+  const [_, forceUpdate] = React.useReducer(x => x + 1, 0);
+ 
    let Users = [
-    {Name: 'Alex', id: '1', passport:'123'},
-    {Name:'Ivan', id: '2', passport:'52'}
+    {Name: 'Alex', id: '1', passport:'123',age: 20},
+  
     ];
     const data = []
     Users.forEach((user) => {
+      function changeName(id, newName){
+        Users = Users.map(user => {
+          if(user.id === id){
+            return {
+              ...user,
+              Name:newName
+            } 
+          }
+          forceUpdate()
+          return user
+        })
+        }
+      function onClick(){
+        changeName(user.id, 'Admin')
+        
+        console.log(Users)
+      }
       data.push(
-        <div key={user.id} className="userSpan">
-            <UsersName 
-            User={user.Name}
-            changeName={changeName}
-            />
+        <div className="header" key={user.id}>
+        <div className="header__logo">
+
         </div>
-      
-      )
-    })
+        <ul className="header__ul">
+            <li>Home</li>
+            <li>About</li>
+            <li>{user.Name}</li>
+        </ul>
+        <button className="header__button" onClick={onClick}>Изменить Имя</button>
+    </div>
+      )})
+    // })
 //    const res = [];
 //    for(let i = 0;i < Users.length;i++){
 //     const el = Users[i];
@@ -47,17 +58,10 @@ function Header(){
 // },[]);
 
     return (
-    <div className="header">
-        <div className="header__logo">
-
-        </div>
-        <ul className="header__ul">
-            <li>Home</li>
-            <li>About</li>
-           {data}
-        </ul>
-        <button className="header__button" onChange={(event) => {console.log(event);}}>Просто кнопка</button>
-    </div>
+      <div>
+        {data}
+      </div>
+      
     )
 }
 
