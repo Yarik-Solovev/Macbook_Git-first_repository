@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import './index.css'
 
 
 function Header(){
-  const [_, forceUpdate] = React.useReducer(x => x + 1, 0);
  
    let Users = [
     {Name: 'Alex', id: '1', passport:'123',age: 20},
@@ -11,23 +10,6 @@ function Header(){
     ];
     const data = []
     Users.forEach((user) => {
-      function changeName(id, newName){
-        Users = Users.map(user => {
-          if(user.id === id){
-            return {
-              ...user,
-              Name:newName
-            } 
-          }
-          forceUpdate()
-          return user
-        })
-        }
-      function onClick(){
-        changeName(user.id, 'Admin')
-        
-        console.log(Users)
-      }
       data.push(
         <div className="header" key={user.id}>
         <div className="header__logo">
@@ -38,7 +20,7 @@ function Header(){
             <li>About</li>
             <li>{user.Name}</li>
         </ul>
-        <button className="header__button" onClick={onClick}>Изменить Имя</button>
+        <button className="header__button">Изменить Фон</button>
     </div>
       )})
     // })
@@ -56,10 +38,32 @@ function Header(){
 //     )
 //     return res
 // },[]);
+const [info, setData] = useState({name:'', password: '',});
+
+function logInfo(e) {
+  setData((currentData) => {
+       return{ ...currentData,
+        name: e.target.value
+       }
+  })
+}
+
+function logInfo2(e){
+  setData((value) => {
+    return{
+    ...value,
+    password: e.target.value,
+    }
+  })
+}
 
     return (
       <div>
         {data}
+        <input type="text" placeholder="Введите имя" onChange={logInfo}/>
+        <input type="password" placeholder="Введите пароль" onChange={logInfo2}/>
+        <p>Name:{info.name}</p>
+        <p>Password:{info.password}</p>
       </div>
       
     )
