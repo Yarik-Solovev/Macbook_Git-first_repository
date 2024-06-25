@@ -10,7 +10,7 @@ function Header(){
     ];
     const [isDark, setColor] = useState(true)
     function swipeColor(e){
-      setColor(!isDark)
+      setColor((currentData) => !currentData)
     }
     const data = []
     Users.forEach((user) => {
