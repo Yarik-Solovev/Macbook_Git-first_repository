@@ -8,6 +8,10 @@ function Header(){
     {Name: 'Alex', id: '1', passport:'123',age: 20},
   
     ];
+    const [isDark, setColor] = useState(true)
+    function swipeColor(e){
+      setColor(!isDark)
+    }
     const data = []
     Users.forEach((user) => {
       data.push(
@@ -20,7 +24,7 @@ function Header(){
             <li>About</li>
             <li>{user.Name}</li>
         </ul>
-        <button className="header__button">Изменить Фон</button>
+        <button className={isDark ? 'header__button' : 'header__button--active'} onClick={swipeColor}>Изменить Фон</button>
     </div>
       )})
     // })
@@ -41,11 +45,12 @@ function Header(){
 const [info, setData] = useState({name:'', password: '',});
 
 function logInfo(e) {
+  e.target.value = e.target.value.replace(/\d/g, "");
   setData((currentData) => {
-       return{ ...currentData,
-        name: e.target.value
-       }
-  })
+    return{ ...currentData,
+     name: e.target.value
+    }
+})
 }
 
 function logInfo2(e){
@@ -60,7 +65,7 @@ function logInfo2(e){
     return (
       <div>
         {data}
-        <input type="text" placeholder="Введите имя" onChange={logInfo}/>
+        <input type="text" placeholder="Введите имя" onChange={logInfo}  />
         <input type="password" placeholder="Введите пароль" onChange={logInfo2}/>
         <p>Name:{info.name}</p>
         <p>Password:{info.password}</p>

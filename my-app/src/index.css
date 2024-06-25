@@ -42,3 +42,13 @@
     border: 2px solid;
 }
 
+.header__button--active{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 90px;
+    height: 50px;
+    margin-right: 70px;
+    border: 2px solid;
+    background-color: black;
+}
