@@ -15,7 +15,6 @@ function priceDown(){
     if(count > 0){
     switchCount((value) => --value)
     }
-
 }
     return (
         <div className="Card">
