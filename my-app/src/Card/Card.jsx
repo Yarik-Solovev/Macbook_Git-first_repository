@@ -1,7 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './index.css'
 import Logo from './logo-ts.webp'
 function Card(){
+useEffect(() => {
+    console.log('я отрисовался');
+    return(
+        console.log('Я удалился')
+    )
+},[])
 let [count, switchCount] = useState(1)
 let price = 180  * count;
 
