@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import './index.css'
 import Logo from './logo-ts.webp'
 function Card(){
-let [count, switchCount] = useState(0)
-let price = 180 + (180 * count);
+let [count, switchCount] = useState(1)
+let price = 180  * count;
 
 function priceUp(){
     switchCount((value) => (
@@ -12,7 +12,7 @@ function priceUp(){
    
 }
 function priceDown(){
-    if(count > 0){
+    if(count > 1){
     switchCount((value) => --value)
     }
 }
