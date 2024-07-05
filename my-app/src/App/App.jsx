@@ -3,7 +3,10 @@ import './index.css'
 
 
 function Header(){
- 
+    const [time, setTime] = useState(new Date());
+    setInterval(() => {
+      setTime(new Date())
+    }, 1000);
    let Users = [
     {Name: 'Alex', id: '1', passport:'123',age: 20},
   
@@ -16,8 +19,8 @@ function Header(){
     Users.forEach((user) => {
       data.push(
         <div className="header" key={user.id}>
-        <div className="header__logo">
-
+        <div>
+          {time.toLocaleTimeString()}
         </div>
         <ul className="header__ul">
             <li>Home</li>
