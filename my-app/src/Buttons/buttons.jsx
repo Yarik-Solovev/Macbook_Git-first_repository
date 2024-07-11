@@ -1,7 +1,7 @@
 import './index.css'
 
 
-export default function Buttons({active, onChange}){
+export default function Buttons({active, onChange, ...props}){
     return (
         <section>
         <button onClick={() => onChange('info')} className={active === 'info' ? ('Button--active') : ('Button')}>О нас</button>

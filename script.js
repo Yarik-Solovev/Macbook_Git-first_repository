@@ -16,13 +16,10 @@
 
 // console.log(colorOfCar);
 
-
-
 // const b = 1;
 
 // let a = 0 ?? b;//задает значение если переменая не нашлась (??)
 // console.log(a);
-
 
 // const {name, surname, age} = {name:'Alex', surname:'Ivanov', age:52, };
 // console.log(name);//Alex
@@ -71,12 +68,11 @@
 //     hasCar:{
 //         ...user_second.hasCar
 //     },
-    
+
 //     hasModerStatus:true,
 // }
 
 // console.log(moder_second);
-
 
 // const user = {
 //     name:'Alex',
@@ -93,14 +89,11 @@
 
 // console.log(getInfo(rest));
 
-
 // const  a = setTimeout(() => {
 //     console.log(1);
 // },1000)
 
-
 // clearTimeout(a);
-
 
 // console.log(2);
 // console.log(3);
@@ -109,14 +102,9 @@
 // //     console.log('ванюща пора кушать');
 // // }, 1000)
 
-
 // setTimeout(() => {
 //     clearInterval(b)
 // }, 5000)//убереть  console.log('ванюща пора кушать через 5 секунд (или выполнений)
-
-
-
-
 
 // const getUserInfo = () => {
 //     return new Promise((resolve, reject) => {
@@ -145,19 +133,17 @@
 //             .then((game) => {
 //                 console.log(game);
 //             })
-                
+
 // }
 
 // run()
 
-
 //https://jsonplaceholder.typicode.com/posts
-
 
 // const newPost = {
 //     id: 698432,
 //     name: 'Clementina DuBuque',
-//     username: 'Moriah.Stanton', 
+//     username: 'Moriah.Stanton',
 //}
 
 // const test = JSON.stringify(newPost)
@@ -182,8 +168,6 @@
 //                 console.log(info);
 //             })
 
-
-
 // function openOrSenior(data){
 //     let finalList = [];
 //     data.forEach((el) => {
@@ -193,11 +177,10 @@
 //         else {
 //             finalList.push('Open')
 //         }
-        
+
 //     });
 //     return finalList
 // }
-
 
 // const run = () => {
 //     return new Promise((res, rej) => {
@@ -207,7 +190,7 @@
 //             })
 //             .then((info) => {
 //                 const infoFromServer =(info[0])
-                
+
 //             })
 //     })
 // }
@@ -230,7 +213,7 @@
 //                 .then((data) => {
 //                      return data.json()
 //                 })
-                
+
 //         })
 // }
 
@@ -238,8 +221,6 @@
 //     .then((info) => {
 //         console.log('User',info)
 //     })
-
-
 
 //тоже самое что сверху только на async await
 // async function asyncFetchTodos() {
@@ -251,41 +232,39 @@
 
 // asyncFetchTodos()
 
-const url ='https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
+const url =
+	'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m#daily=sunrise&timezone=Europe%2FMoscow'
 
-const firstPart = document.querySelector('.firstPart');
-const divInfo = document.querySelector('.info');
-const button = document.querySelector('.secondPartButton');
+const firstPart = document.querySelector('.firstPart')
+const divInfo = document.querySelector('.info')
+const button = document.querySelector('.secondPartButton')
 
 button.addEventListener('click', getWeatherInfo)
 
-function startAnimation(){
-  divInfo.style.cssText=`
+function startAnimation() {
+	divInfo.style.cssText = `
   background-image: url('../img/cat.gif');
   `
- }
- 
- function endAnimation(){
-   divInfo.style.cssText=`
+}
+
+function endAnimation() {
+	divInfo.style.cssText = `
   background-image: none;
   `
- }
+}
 
-
- async function getWeatherInfo() {
-     startAnimation()
-     const data = await fetch(url);
-     const info = await data.json();
-     endAnimation()
-     divInfo.textContent=`${info.current.interval}`
-     button.removeEventListener('click', getWeatherInfo)
-    }
-
+async function getWeatherInfo() {
+	startAnimation()
+	const data = await fetch(url)
+	const info = await data.json()
+	endAnimation()
+	divInfo.textContent = `${info.current.interval}`
+	button.removeEventListener('click', getWeatherInfo)
+}
 
 //  let data;
 
 // // try и catch  ток с синхронныйм кодом
-
 
 // //startAnimation
 //  try{
@@ -332,8 +311,6 @@ function startAnimation(){
 // person.name = 'Ivan'
 // console.log(person);
 
-
-
 // function hello() {
 //   console.log('hello', this)
 // }
@@ -362,7 +339,6 @@ function startAnimation(){
 // person.LogInfo.call(Lena, 'Frontend', '8-123-123-12-12',);
 // person.LogInfo.apply(Lena, ['Frontend', '8-123-123-12-12']);
 
-
 // const array = [1,2,3,4,5,]
 
 // Array.prototype.multyNum = function(n){
@@ -374,9 +350,7 @@ function startAnimation(){
 // console.log(array.multyNum(2))
 // console.log(array.multyNum(5))
 
-
 //event loop 25 minutes
-
 
 // const createElement = () => {
 //   let count = 0;
@@ -396,7 +370,6 @@ function startAnimation(){
 // incrementFromFunc()
 // incrementFromFunc()
 // logFromFunc()//в функции лог выведет что message равен 3
-
 
 // const createElement = () => {
 //   let count = 0;
@@ -449,11 +422,10 @@ function startAnimation(){
 // 3 mn
 // `
 
-
-// console.log(str.match(/^\d/gm))//массив первых значений 
+// console.log(str.match(/^\d/gm))//массив первых значений
 // console.log('I love you'.replace(/love/, 'like'));
 
-// // \d любая цифра 
+// // \d любая цифра
 // // \w любая цифра,буква или пробел
 // // \s пробед
 // // \D любой символ кроме D
@@ -463,19 +435,16 @@ function startAnimation(){
 
 // // console.log(/\d/.test('1 man'))
 
-// // ^ начало строки 
-// // $ конец строки 
+// // ^ начало строки
+// // $ конец строки
 
 // // диапозоны
-
 
 // //[sdr] любой символ
 // //[0-9] диапозон от 0 - 9
 // //[a-z] диапозон от a - z
 
 // console.log(/[sdr]/.test('#'));
-
-
 
 // //еще больше инфы  если надо (https://youtu.be/2CW1wVtnzi4?si=4WyaAyz5_TsiMk6F)
 
@@ -503,12 +472,11 @@ function startAnimation(){
 // console.log(map.size);
 // // map.clear()
 
-
 // for (let [key, value] of map){
 //   console.log(key, value)
 // }
 
-// for (let key of map.keys()){// выдает ключи 
+// for (let key of map.keys()){// выдает ключи
 //   console.log(key)
 // }
 
@@ -516,7 +484,7 @@ function startAnimation(){
 //   console.log( value)
 // }
 
-// const array = Array.from()//делает массив из другово элемента 
+// const array = Array.from()//делает массив из другово элемента
 
 // const set = new Set([1,2,2,2,3,3,3,3,3,3,4,5,6,7,8,])//выведет [1,2,3,4,5,6,7,8]
 // set.add(9)
@@ -524,7 +492,7 @@ function startAnimation(){
 // set.delete(9);
 // //set.clear()
 // console.log(Array.from(set) )
- 
+
 // Object.prototype.ToLow = function(){
 //   return this.toLowerCase()
 // }
@@ -533,11 +501,7 @@ function startAnimation(){
 
 // console.log(str.ToLow());//вернет abc
 
-
-
-
 //git rebase better than merge
-
 
 // function Pirat(name) {
 //   return this.name = name;
@@ -551,7 +515,6 @@ function startAnimation(){
 
 // const resultArrowFunc = arrowFunc('Alex')
 // console.log(resultArrowFunc);
-
 
 // // a ||= b;//если а = false то тогда оно будет равно b
 // // a &&= b;//если а = true то тогда оно будет равно b
@@ -568,7 +531,6 @@ function startAnimation(){
 
 // // console.log(findShort('asd asdf asjhdkfl jdskfajdskgjha'))
 
-
 // const numberFormat = new Intl.NumberFormat('en-US').format(1324.12)
 // console.log(numberFormat);
 
@@ -580,12 +542,10 @@ function startAnimation(){
 
 // console.log(out);
 
-
 // percent = new Intl.NumberFormat('ru-Ru', {
 //   style: 'percent'
 // }).format(0.55)
 // console.log(percent);//выдатс 55
-
 
 // const liter = new Intl.NumberFormat('en-Us', {
 //   style:'unit',
@@ -601,7 +561,6 @@ function startAnimation(){
 // }).format(80)
 
 // console.log(speed);
-
 
 // const sum = {
 //   width:0,
@@ -633,12 +592,10 @@ function startAnimation(){
 // const numbers = Object.freeze([1,2,3,4,5,])
 // console.log(numbers);
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 // console.log(new Date(2017, 0, 1, 15, 30, 0));
-// console.log(new Date('2017-01-01T15:30:10'));//чаще вот это  (ISO формат) 
+// console.log(new Date('2017-01-01T15:30:10'));//чаще вот это  (ISO формат)
 // console.log(new Date(1283620367001));//прошло с того монента тоже часто используются(timestamp)
 // console.log(Date.now());//чтобы получить  (timestamp) самое лучший вариант
 // const data = new Date();
@@ -664,7 +621,6 @@ function startAnimation(){
 // console.log(data.toLocaleDateString(тут можно указать язык));//для строки учитавая твое местоположение
 // console.log(data.toDateString(en));//для строки
 
-
 // function oddOrEven(array) {
 //   if(array.length === 0 ){
 //     return 'even'
@@ -685,13 +641,11 @@ function startAnimation(){
 
 // console.log(oddOrEven([1]));
 
-
 // const run = () => {
 //   return new Promise((resolve, reject) => {
 //     resolve(fetch(url))
 //   })
 // }
-
 
 // run()
 //   .then((data) => {
@@ -721,26 +675,26 @@ function startAnimation(){
 
 const headerButton = document.querySelector('.header_button')
 
-headerButton.addEventListener('click', createMenu);
+headerButton.addEventListener('click', createMenu)
 
-function createMenu(){
-  const menu = document.createElement('div');
-  menu.className = 'main__menu'
-  menu.innerHTML=`
+function createMenu() {
+	const menu = document.createElement('div')
+	menu.className = 'main__menu'
+	menu.innerHTML = `
   <button style='width:100px; height:100px;' class='innerButton'>закрыть</button>
   `
-  menu.style.cssText=`
+	menu.style.cssText = `
   display:flex;
   justify-content:center;
   align-items:center;
   `
-  document.body.prepend(menu);
-  const el = document.querySelector('.main__menu')
-  const innerButton = document.querySelector('.innerButton');
-  innerButton.addEventListener('click', deleteMenu);
-  function deleteMenu(){
-    el.remove()
-  }
+	document.body.prepend(menu)
+	const el = document.querySelector('.main__menu')
+	const innerButton = document.querySelector('.innerButton')
+	innerButton.addEventListener('click', deleteMenu)
+	function deleteMenu() {
+		el.remove()
+	}
 }
 
 // let a = 144
@@ -769,7 +723,7 @@ function createMenu(){
 
 // const str = 'AATT'
 // const newStr = str.split('');
-// const result = []; 
+// const result = [];
 // newStr.forEach((el) => {
 //   switch (el) {
 //     case 'A':
@@ -809,8 +763,6 @@ function createMenu(){
 
 // console.log(sumIntervals([[1,4],[7, 10],[3, 5]]));
 
-
-  
 //   function zeros (n) {
 //     const w = n;
 //     if(w < 5){
@@ -822,39 +774,38 @@ function createMenu(){
 //     else if(w >= 25){
 //       return (Math.floor(w / 5) + 1)
 //     }
-    
+
 //     else{
-      
+
 //        return( Math.floor(w / 5))
 //     }
 //   }
 
 // console.log(zeros(100));
 
-const  HTMLFinallPrice = document.querySelector('.example__result')
+const HTMLFinallPrice = document.querySelector('.example__result')
 const example__price = document.querySelector('.example__price')
-const example__button = document.querySelector('.example__button');
+const example__button = document.querySelector('.example__button')
 const second__example__button = document.querySelector('.example__button2')
 const price = Number(example__price.textContent)
 let counter = parseInt(example__price.dataset.counterPrice)
- example__button.addEventListener('click', getRes);
-second__example__button.addEventListener('click', secondGetRes);
+example__button.addEventListener('click', getRes)
+second__example__button.addEventListener('click', secondGetRes)
 
- function getRes(){
-   counter++
-   HTMLFinallPrice.textContent=`${ price * counter}`
+function getRes() {
+	counter++
+	HTMLFinallPrice.textContent = `${price * counter}`
 }
-function secondGetRes(){
-  if(price * counter - price > 0){
-    HTMLFinallPrice.textContent=`${price * counter - price}`
-    counter--
-    } 
-};
+function secondGetRes() {
+	if (price * counter - price > 0) {
+		HTMLFinallPrice.textContent = `${price * counter - price}`
+		counter--
+	}
+}
 
 // async function errorCatch(){
 //   const data = await fetch(asdfghjkl).catch((er) => {console.log(er);})
 // }
-
 
 // console.log(errorCatch());
 
@@ -875,26 +826,25 @@ function secondGetRes(){
 // function sleep(millis) {
 //   return  new Promise((res,rej) => {
 //     setTimeout(() => {
-//       res(52) 
+//       res(52)
 //     },millis)
 //   })
 // }
 
 // console.log(sleep(100));
 
-Array.prototype.last = function() {
-   if(this.length === 0){
-    return 
-   }
-   else{
-    const i =  this.length;
-    return this[i - 1]
-   }
-};
+Array.prototype.last = function () {
+	if (this.length === 0) {
+		return
+	} else {
+		const i = this.length
+		return this[i - 1]
+	}
+}
 
-const arr = [1,2,3,4,];
+const arr = [1, 2, 3, 4]
 
-console.log( arr.last())
+console.log(arr.last())
 
 // const el = 52
 // console.log(el.toString());
@@ -909,10 +859,10 @@ console.log( arr.last())
 // СОСТОЯНИЯХ
 
 const about = document.querySelector('.header__ul__li__a')
-about.addEventListener('click', newColor);
+about.addEventListener('click', newColor)
 
-function newColor(){
-  about.className='header__ul__li__a--active'
+function newColor() {
+	about.className = 'header__ul__li__a--active'
 }
 
 // //IIFE
@@ -925,57 +875,54 @@ function newColor(){
 
 //           nvm install 22.2.0
 
-const justButton = document.querySelector('.button');
-const  justInput = document.querySelector('.inputHeight')
-const  justInput2 = document.querySelector('.inputWeight')
-justButton.addEventListener('click', getResult);
+const justButton = document.querySelector('.button')
+const justInput = document.querySelector('.inputHeight')
+const justInput2 = document.querySelector('.inputWeight')
+justButton.addEventListener('click', getResult)
 let prefValue = justInput.value
 let secondPrefValue = justInput2.value
 justInput.addEventListener('input', noWord)
 justInput2.addEventListener('input', secondNoWord)
 function secondNoWord(e) {
-  const userData = e.target.value;
-  if(/[a-zа-я]/i.test(userData)){
-    justInput2.value = secondPrefValue;
-    return
-  }
-  else{
-    justInput2.value = userData;
-    secondPrefValue = userData;
-  }
+	const userData = e.target.value
+	if (/[a-zа-я]/i.test(userData)) {
+		justInput2.value = secondPrefValue
+		return
+	} else {
+		justInput2.value = userData
+		secondPrefValue = userData
+	}
 }
-function noWord(e){
-  const userData = e.target.value;
-  if(/[a-zа-я]/i.test(userData)){
-    justInput.value = prefValue;
-    return
-  }
-  else{
-    justInput.value = userData;
-    prefValue = userData;
-  }
+function noWord(e) {
+	const userData = e.target.value
+	if (/[a-zа-я]/i.test(userData)) {
+		justInput.value = prefValue
+		return
+	} else {
+		justInput.value = userData
+		prefValue = userData
+	}
 }
-function getResult(e){
-    if(justInput.value > 100 && justInput2.value > 30){
-    let res = justInput2.value * 10000 / (justInput.value * justInput.value)
-    alert(res.toFixed(1))
-    }
-    else{
-      alert('Чёт Маловато')
-    }
-  }
+function getResult(e) {
+	if (justInput.value > 100 && justInput2.value > 30) {
+		let res = (justInput2.value * 10000) / (justInput.value * justInput.value)
+		alert(res.toFixed(1))
+	} else {
+		alert('Чёт Маловато')
+	}
+}
 
-document.querySelector('.img-span').addEventListener('click', function(e){
-  window.location.href='https://youtu.be/dQw4w9WgXcQ?si=u_b1sgh6v1zvLen4'
+document.querySelector('.img-span').addEventListener('click', function (e) {
+	window.location.href = 'https://youtu.be/dQw4w9WgXcQ?si=u_b1sgh6v1zvLen4'
 })
 
 let ul_liCounter = 1
 const header_ul_li = document.querySelector('.header_ul_li')
-header_ul_li.addEventListener('click', function(e){
-  let i = 45;
-  i = i * ul_liCounter
-  ul_liCounter++
-  header_ul_li.style.cssText=`
+header_ul_li.addEventListener('click', function (e) {
+	let i = 45
+	i = i * ul_liCounter
+	ul_liCounter++
+	header_ul_li.style.cssText = `
   transform: rotate(${i}deg);
   text-decoration: none;
   color: black;
@@ -983,4 +930,3 @@ header_ul_li.addEventListener('click', function(e){
   font-weight: 600;
   `
 })
-

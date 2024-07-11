@@ -1,81 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Working on Macbook</title>
-    <link rel="icon" href="img/cat.gif">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="../../css/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Working on Macbook</title>
+		<link rel="icon" href="img/cat.gif" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="../../css/normalize.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
 
-<body>
+	<body>
+		<div class="header">
+			<div class="img-span">
+				<img src="img/coffee-cup-svgrepo-com.svg" />
+			</div>
 
-<div class="header">
-    <div class="img-span">
-        <img src="img/coffee-cup-svgrepo-com.svg">
-    </div>
+			<ul class="header_ul">
+				<li class="header_ul_li"><a>Home</a></li>
+				<li><a href="#" class="header__ul__li__a">About</a></li>
+				<li>
+					<select>
+						<option><a href="#">Footer</a></option>
+						<option selected><a href="#">NotFooter</a></option>
+					</select>
+				</li>
+			</ul>
 
-    <ul class = 'header_ul'>
-        <li class="header_ul_li"><a>Home</a></li>
-        <li><a href="#" class="header__ul__li__a">About</a></li>
-        <li>
-            <select>
-            <option><a href="#" >Footer</a></option>
-            <option selected><a href="#">NotFooter</a></option>
-            </select>
-        </li>
-    </ul>
-    
-        <button class="header_button">
-            <img src="img/menu-logo.svg">
-        </button>
-    
-</div>
+			<button class="header_button">
+				<img src="img/menu-logo.svg" />
+			</button>
+		</div>
 
-<div class="main">
-    
-    <div class="secondPart" >
-        <button class="secondPartButton" >find out the current interval</button>
-    </div>
-    <div class="firstPart">
-        <div class="info">
-            
-        </div>
-    </div>
-</div>
+		<div class="main">
+			<div class="secondPart">
+				<button class="secondPartButton">find out the current interval</button>
+			</div>
+			<div class="firstPart">
+				<div class="info"></div>
+			</div>
+		</div>
 
+		<div class="example">
+			<div class="hed">
+				<p>
+					Ценна:<span class="example__price" data-counter-price="1">180</span
+					>руб
+				</p>
+				<button class="example__button">+</button>
+				<button class="example__button2">-</button>
+			</div>
+			<div class="fot">
+				<div class="example__res">
+					<p class="example__res-text">
+						Итого к оплате:<span class="example__result">180</span>руб
+					</p>
+				</div>
+			</div>
+		</div>
 
-<div class="example">
-    <div class="hed">
-        <p>Ценна:<span class="example__price" data-counter-price="1">180</span>руб</p>
-        <button class="example__button">+</button>
-        <button class="example__button2">-</button>
-    </div>
-    <div class="fot">
-        <div class="example__res">
-            <p class="example__res-text">Итого к оплате:<span class="example__result">180</span>руб</p>
-            
-        </div>
-        
-    </div>
-</div>
-
-<form>
-    <input required type="text"  placeholder="Введите рост" class="inputHeight">
-    <input required type="text" placeholder="Введите Вес" class="inputWeight">
-    <button class="button">посчитать ИМТ</button>
-</form>
-<div class="htmlRoot">
-        
-</div>
-<script  src="script.js"> </script>
-
-</body>
-
+		<form>
+			<input
+				required
+				type="text"
+				placeholder="Введите рост"
+				class="inputHeight"
+			/>
+			<input
+				required
+				type="text"
+				placeholder="Введите Вес"
+				class="inputWeight"
+			/>
+			<button class="button">посчитать ИМТ</button>
+		</form>
+		<div class="htmlRoot"></div>
+		<script src="script.js"></script>
+	</body>
 </html>
 <!-- 
 <form>
@@ -84,4 +90,3 @@
 </form>
 Если поле ввода пустое ничего не отправиться и выйдет подсказка
 -->
-
