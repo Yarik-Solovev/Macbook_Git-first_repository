@@ -10,6 +10,9 @@ export default function App() {
 	function openModal() {
 		setIsModal(current => setIsModal(!current))
 	}
+	function closeModal() {
+		setIsModal(current => setIsModal(!current))
+	}
 
 	return (
 		<>
@@ -21,6 +24,7 @@ export default function App() {
 			<Modal open={isModal}>
 				<h1>Modal</h1>
 				<p>It is a modal</p>
+				<Button onClick={closeModal}>Закрыть модальное окно</Button>
 			</Modal>
 		</>
 	)
