@@ -15,3 +15,4 @@ export default function Modal({ children, open }) {
 		document.getElementById('modal')
 	)
 }
+//3:16

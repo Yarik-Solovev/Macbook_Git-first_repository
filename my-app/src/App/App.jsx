@@ -21,6 +21,7 @@ export default function App() {
 			{tab === 'contact' && <Contact />}
 
 			<Button onClick={openModal}>Открыть модальное окно</Button>
+
 			<Modal open={isModal}>
 				<h1>Modal</h1>
 				<p>It is a modal</p>
