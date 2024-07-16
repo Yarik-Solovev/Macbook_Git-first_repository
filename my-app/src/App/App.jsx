@@ -4,6 +4,7 @@ import Info from './Info/info'
 import Contact from '../Contact/contact'
 import Button from './Button/Button'
 import Modal from './Modal/Modal'
+import Hooks from '../Hooks/Hooks'
 export default function App() {
 	const [tab, setTab] = useState('info')
 	const [isModal, setIsModal] = useState(false)
@@ -27,6 +28,8 @@ export default function App() {
 				<p>It is a modal</p>
 				<Button onClick={closeModal}>Закрыть модальное окно</Button>
 			</Modal>
+
+			<Hooks />
 		</>
 	)
 }
