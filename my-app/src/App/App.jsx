@@ -5,6 +5,7 @@ import Contact from '../Contact/contact'
 import Button from './Button/Button'
 import Modal from './Modal/Modal'
 import Hooks from '../Hooks/Hooks'
+import Hooks2 from '../Hooks/Hooks2'
 export default function App() {
 	const [tab, setTab] = useState('info')
 	const [isModal, setIsModal] = useState(false)
@@ -30,6 +31,7 @@ export default function App() {
 			</Modal>
 
 			<Hooks />
+			<Hooks2 />
 		</>
 	)
 }
