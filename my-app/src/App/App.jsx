@@ -6,6 +6,9 @@ import Button from './Button/Button'
 import Modal from './Modal/Modal'
 import Hooks from '../Hooks/Hooks'
 import Hooks2 from '../Hooks/Hooks2'
+import Main from '../Context/Main'
+import Alert from '../Context/Alert'
+import AlertProvider from '../Context/AlertContext'
 export default function App() {
 	const [tab, setTab] = useState('info')
 	const [isModal, setIsModal] = useState(false)
@@ -32,6 +35,11 @@ export default function App() {
 
 			<Hooks />
 			<Hooks2 />
+
+			<AlertProvider>
+				<Alert />
+				<Main />
+			</AlertProvider>
 		</>
 	)
 }

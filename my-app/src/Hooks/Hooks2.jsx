@@ -1,1 +1,3 @@
-export default function Hooks2() {}
+export default function Hooks2() {
+
+}
