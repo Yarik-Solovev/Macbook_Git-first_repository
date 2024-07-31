@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
-
+import useInput from './useInput'
 export default function Hooks() {
-	const [value, setValue] = useState('')
 	const [number, setNumber] = useState(52)
 	const [color, setColor] = useState(false)
 	// useEffect(() => {
@@ -32,19 +31,14 @@ export default function Hooks() {
 		console.log('Styled Changed') //при изменении number   не вызывается log из за useMemo
 	}, [style])
 
-	useEffect(() => {
-		console.log('Состояние изменилось')
-	}, [value])
+	const userName = useInput('')
 	return (
 		<>
-			<h1>Value:{value} </h1>
+			<h1>Value:{userName.value} </h1>
 			<input
 				// ref={input}
+				{...userName}
 				type='text'
-				value={value}
-				onChange={e => {
-					setValue(e.target.value)
-				}}
 			/>
 			<p style={style}>{res}</p>
 			<button onClick={() => setNumber(current => ++current)}>увеличить</button>
