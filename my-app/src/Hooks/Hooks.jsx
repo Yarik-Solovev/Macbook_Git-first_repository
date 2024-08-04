@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import useInput from './useInput'
+import useHover from './useHover'
 export default function Hooks() {
 	const [number, setNumber] = useState(52)
 	const [color, setColor] = useState(false)
@@ -32,6 +33,9 @@ export default function Hooks() {
 	}, [style])
 
 	const userName = useInput('')
+
+	const div = useRef()
+	const isHovering = useHover(div)
 	return (
 		<>
 			<h1>Value:{userName.value} </h1>
@@ -46,6 +50,14 @@ export default function Hooks() {
 			<button onClick={() => setColor(current => !current)}>
 				изменить цвет
 			</button>
+			<div
+				ref={div}
+				style={{
+					width: '100px',
+					height: '100px',
+					backgroundColor: isHovering ? 'red' : 'blue',
+				}}
+			></div>
 		</>
 	)
 }
