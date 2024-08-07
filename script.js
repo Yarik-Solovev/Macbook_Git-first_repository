@@ -930,3 +930,94 @@ header_ul_li.addEventListener('click', function (e) {
   font-weight: 600;
   `
 })
+
+// class Animal {
+// 	static type = 'ANIMAL'
+// 	constructor(options) {
+// 		this.name = options.name
+// 		this.age = options.age
+// 		this.hasTail = options.hasTail
+// 	}
+
+// 	voice() {
+// 		console.log('I am Animal!')
+// 	}
+// }
+
+// const animal = new Animal({
+// 	name: 'Animal',
+// 	age: 5,
+// 	hasTail: true,
+// })
+
+// console.log(animal)
+// console.log(animal.voice())
+
+// class Cat extends Animal {
+// 	constructor(options) {
+// 		super(options)
+// 		this.color = options.color
+// 	}
+
+// 	voice() {
+// 		super.voice()
+// 		console.log('I am a Cat')
+// 	}
+
+// 	get getAge() {
+// 		return this.age * 7
+// 	}
+// 	set setAge(newAge) {
+// 		this.age = newAge
+// 	}
+// }
+
+// const cat = new Cat({
+// 	name: 'Cat',
+// 	age: 7,
+// 	hasTail: true,
+// 	color: 'black',
+// })
+
+// console.log(cat)
+// console.log(cat.voice())
+// console.log((cat.setAge = 8))
+// console.log(cat.getAge)
+
+class Component {
+	constructor(selector) {
+		this.$el = document.querySelector(selector)
+	}
+
+	hide() {
+		this.$el.style.display = 'none'
+	}
+
+	show() {
+		this.$el.style.display = 'block'
+	}
+}
+
+class Box extends Component {
+	constructor(options) {
+		super(options.selector)
+
+		this.$el.style.width = this.$el.style.height = options.size + 'px'
+		this.$el.style.background = options.color
+	}
+}
+
+const box = new Box({
+	selector: '.div',
+	size: 100,
+	color: 'red',
+})
+
+box.hide()
+box.show()
+
+const box2 = new Box({
+	selector: '.div2',
+	size: 120,
+	color: 'blue',
+})
